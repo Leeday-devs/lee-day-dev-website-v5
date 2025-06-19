@@ -106,9 +106,9 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
             <a
               href="#main-content"
               className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md"
-              aria-label="Lee Day - Web & AI Solutions - Go to main content"
+              aria-label="LD Web Development - Go to main content"
             >
-              Lee Day
+              LD Web Development
             </a>
           </div>
 

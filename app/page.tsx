@@ -139,7 +139,7 @@ export default function HomePage() {
 
                     <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
                       Transform your business with cutting-edge web solutions and intelligent AI integration. From
-                      concept to deployment, I deliver exceptional digital experiences.
+                      concept to deployment, LD Web Development delivers exceptional digital experiences.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -407,7 +407,7 @@ export default function HomePage() {
                   </span>
                 </h2>
                 <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
-                  Explore some of my recent projects showcasing custom development, AI integration, and comprehensive
+                  Explore some of our recent projects showcasing custom development, AI integration, and comprehensive
                   hosting solutions
                 </p>
               </div>
@@ -615,7 +615,7 @@ export default function HomePage() {
                   <div className="relative mx-auto lg:mx-0 w-80 h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-gray-700">
                     <OptimizedImage
                       src="/placeholder.svg?height=320&width=320"
-                      alt="Lee Day - Professional Web Developer and AI Integration Specialist based in London and Windsor"
+                      alt="Lee Day - Professional Web Developer and AI Integration Specialist at LD Web Development based in London"
                       width={320}
                       height={320}
                       className="w-full h-full object-cover"
@@ -644,9 +644,12 @@ export default function HomePage() {
                       </span>
                     </h2>
                     <p className="text-responsive-xl text-blue-400 font-semibold mb-2">CEO & Lead Developer</p>
-                    <p className="text-gray-400 flex items-center">
+                    <p className="text-gray-400 flex items-center mb-2">
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-2" aria-hidden="true"></span>
-                      London & Windsor
+                      LD Web Development
+                    </p>
+                    <p className="text-gray-500 text-sm">
+                      Part of Hosting Easy Ltd | UK Company No. 15169743
                     </p>
                   </div>
 
@@ -658,7 +661,7 @@ export default function HomePage() {
 
                   <p className="text-gray-400 mb-8 leading-relaxed text-responsive-base">
                     From responsive development using cutting-edge frameworks to implementing AI tools that streamline
-                    operations, I provide comprehensive hosting and deployment solutions. My clients trust me to deliver
+                    operations, LD Web Development provides comprehensive hosting and deployment solutions. Our clients trust us to deliver
                     projects on time, within budget, and with ongoing support that ensures long-term success.
                   </p>
 
@@ -679,7 +682,7 @@ export default function HomePage() {
 
                   {/* Trust Indicators */}
                   <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl p-6 border border-gray-700">
-                    <h3 className="text-responsive-xl font-bold mb-4 text-white">Why Clients Trust Me</h3>
+                    <h3 className="text-responsive-xl font-bold mb-4 text-white">Why Clients Trust LD Web Development</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                       <div className="text-center">
                         <div className="text-responsive-2xl font-bold text-blue-400 mb-1">50+</div>
@@ -713,7 +716,7 @@ export default function HomePage() {
               <div className="text-center mb-16">
                 <h2 id="contact-heading" className="text-responsive-4xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                    Contact Lee Day for Your Project
+                    Contact LD Web Development for Your Project
                   </span>
                 </h2>
                 <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
@@ -730,156 +733,4 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-gray-800 py-12 no-print" role="contentinfo">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Logo and Description */}
-            <div className="md:col-span-1">
-              <div className="text-responsive-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">
-                Lee Day
-              </div>
-              <p className="text-gray-400 text-responsive-sm leading-relaxed mb-4">
-                Professional web development and AI integration services. Creating modern, responsive websites that
-                drive business growth.
-              </p>
-              <div className="flex space-x-4" role="list" aria-label="Social media links">
-                <a
-                  href="https://linkedin.com/in/leeday"
-                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                  aria-label="LinkedIn profile"
-                >
-                  <span className="text-xs text-gray-400 hover:text-white">Li</span>
-                </a>
-                <a
-                  href="https://github.com/leeday"
-                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2"
-                  aria-label="GitHub profile"
-                >
-                  <span className="text-xs text-gray-400 hover:text-white">Gh</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div className="md:col-span-1">
-              <h3 className="text-white font-semibold mb-4 text-responsive-base">Quick Links</h3>
-              <nav role="navigation" aria-label="Footer navigation">
-                <ul className="space-y-3">
-                  {[
-                    { id: "hero", label: "Home" },
-                    { id: "about", label: "About" },
-                    { id: "services", label: "Services" },
-                    { id: "portfolio", label: "Portfolio" },
-                    { id: "contact", label: "Contact" },
-                  ].map((item) => (
-                    <li key={item.id}>
-                      <button
-                        onClick={() => scrollToSection(item.id)}
-                        className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
-                      >
-                        {item.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-
-            {/* Services */}
-            <div className="md:col-span-1">
-              <h3 className="text-white font-semibold mb-4 text-responsive-base">Services</h3>
-              <ul className="space-y-3">
-                {[
-                  "Web Development",
-                  "Hosting & Creation",
-                  "AI Integration",
-                  "E-commerce Solutions",
-                  "Website Maintenance",
-                ].map((service, index) => (
-                  <li key={index}>
-                    <a
-                      href={`#${service.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
-                    >
-                      {service}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div className="md:col-span-1">
-              <h3 className="text-white font-semibold mb-4 text-responsive-base">Contact Info</h3>
-              <address className="space-y-3 not-italic">
-                <div className="flex items-center space-x-3">
-                  <div className="w-5 h-5 bg-blue-500/20 rounded flex items-center justify-center" aria-hidden="true">
-                    <span className="text-blue-400 text-xs">📞</span>
-                  </div>
-                  <a
-                    href="tel:+447586266007"
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
-                  >
-                    +44-7586-266007
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-5 h-5 bg-green-500/20 rounded flex items-center justify-center" aria-hidden="true">
-                    <span className="text-green-400 text-xs">✉</span>
-                  </div>
-                  <a
-                    href="mailto:LeeDayDevs@gmail.com"
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 rounded-md p-1"
-                  >
-                    LeeDayDevs@gmail.com
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-5 h-5 bg-purple-500/20 rounded flex items-center justify-center" aria-hidden="true">
-                    <span className="text-purple-400 text-xs">📍</span>
-                  </div>
-                  <span className="text-gray-400 text-responsive-sm">Paul Street, London EC2A 4NE</span>
-                </div>
-              </address>
-
-              {/* Business Hours */}
-              <div className="mt-6">
-                <h4 className="text-white font-medium mb-2 text-responsive-sm">Business Hours</h4>
-                <div className="text-gray-400 text-responsive-xs space-y-1">
-                  <div>Mon - Fri: 9:00 AM - 6:00 PM</div>
-                  <div>Weekend: By Appointment</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Bar */}
-          <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-responsive-sm mb-4 md:mb-0">
-              © 2024 Lee Day - Web & AI Solutions. All rights reserved.
-            </div>
-            <nav className="flex space-x-6 text-responsive-sm" aria-label="Legal links">
-              <a
-                href="/privacy-policy"
-                className="text-gray-400 hover:text-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="/terms-of-service"
-                className="text-gray-400 hover:text-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="/sitemap.xml"
-                className="text-gray-400 hover:text-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
-              >
-                Sitemap
-              </a>
-            </nav>
-          </div>
-        </div>
-      </footer>
-    </div>
-  )
-}
+        <div className="max-w-7xl mx-auto px-4 sm:px\
