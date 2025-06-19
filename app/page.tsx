@@ -39,11 +39,24 @@ export default function HomePage() {
           className="relative min-h-screen flex items-center justify-center overflow-hidden"
           aria-labelledby="hero-heading"
         >
-          {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20">
-            {/* Floating Code Elements */}
-            <div className="absolute top-20 left-10 opacity-20 animate-float-slow">
-              <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4 backdrop-blur-sm">
+          {/* Background with improved contrast */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+            {/* Subtle pattern overlay */}
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+                backgroundSize: "30px 30px",
+              }}
+              aria-hidden="true"
+            ></div>
+          </div>
+
+          {/* Floating Background Elements - Repositioned to not overlap main content */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Top Left Code Snippet */}
+            <div className="absolute top-20 left-4 lg:left-10 opacity-15 animate-float-slow">
+              <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-3 backdrop-blur-sm max-w-xs">
                 <div className="text-blue-400 text-xs font-mono">
                   {'<div className="hero">'}
                   <br />
@@ -54,8 +67,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="absolute top-40 right-20 opacity-20 animate-float-medium">
-              <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4 backdrop-blur-sm">
+            {/* Top Right AI Code */}
+            <div className="absolute top-32 right-4 lg:right-20 opacity-15 animate-float-medium">
+              <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-3 backdrop-blur-sm max-w-xs">
                 <div className="text-purple-400 text-xs font-mono">
                   {"AI.chat({"}
                   <br />
@@ -66,8 +80,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="absolute bottom-40 left-20 opacity-20 animate-float-fast">
-              <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4 backdrop-blur-sm">
+            {/* Bottom Left API Code */}
+            <div className="absolute bottom-32 left-4 lg:left-20 opacity-15 animate-float-fast">
+              <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-3 backdrop-blur-sm max-w-xs">
                 <div className="text-green-400 text-xs font-mono">
                   {"const api = await"}
                   <br />
@@ -75,263 +90,215 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Main Animated Showcase */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            {/* Website Mockups Carousel */}
-            <div className="relative w-full max-w-6xl mx-auto px-4">
-              {/* Large Central Mockup */}
-              <div className="relative z-10 mx-auto w-full max-w-4xl">
-                <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-2xl overflow-hidden animate-pulse-glow">
-                  {/* Browser Header */}
-                  <div className="bg-gray-900/90 px-4 py-3 flex items-center space-x-2 border-b border-gray-700/50">
-                    <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
-                      <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse delay-100"></div>
-                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse delay-200"></div>
-                    </div>
-                    <div className="flex-1 bg-gray-800/50 rounded-md px-3 py-1 ml-4">
-                      <div className="text-gray-400 text-sm font-mono animate-typing">https://your-business.com</div>
-                    </div>
+            {/* Bottom Right Mobile Mockup */}
+            <div className="absolute bottom-20 right-4 lg:right-10 opacity-20 animate-float-mobile">
+              <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-2 shadow-xl border border-gray-700/50 w-32 lg:w-40">
+                <div className="bg-gray-800 rounded-xl overflow-hidden">
+                  <div className="bg-gray-900 px-3 py-1 flex items-center justify-center">
+                    <div className="w-8 h-1 bg-gray-600 rounded-full"></div>
                   </div>
-
-                  {/* Website Content */}
-                  <div className="p-6 space-y-4">
-                    {/* Header */}
-                    <div className="flex items-center justify-between animate-slide-in-left">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg animate-spin-slow"></div>
-                        <div className="text-white font-bold">Your Business</div>
+                  <div className="p-3 space-y-2">
+                    <div className="text-center">
+                      <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-1 animate-spin-slow"></div>
+                      <div className="text-white text-xs font-bold">Mobile</div>
+                    </div>
+                    <div className="space-y-1">
+                      <div className="bg-gray-700/50 rounded p-1">
+                        <div className="w-full h-1 bg-blue-400/50 rounded animate-progress"></div>
                       </div>
-                      <div className="flex space-x-4 text-sm text-gray-300">
-                        <span className="hover:text-blue-400 cursor-pointer transition-colors">Home</span>
-                        <span className="hover:text-blue-400 cursor-pointer transition-colors">Services</span>
-                        <span className="hover:text-blue-400 cursor-pointer transition-colors">Contact</span>
+                      <div className="bg-gray-700/50 rounded p-1">
+                        <div className="w-3/4 h-1 bg-green-400/50 rounded animate-progress delay-500"></div>
                       </div>
                     </div>
-
-                    {/* Hero Content */}
-                    <div className="text-center py-8 animate-fade-in-up">
-                      <h2 className="text-2xl font-bold text-white mb-4 animate-text-shimmer">
-                        Transform Your Business Online
-                      </h2>
-                      <p className="text-gray-300 mb-6">Professional web solutions that drive results</p>
-                      <div className="inline-flex bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full animate-bounce-subtle">
-                        Get Started
-                      </div>
-                    </div>
-
-                    {/* Features Grid */}
-                    <div className="grid grid-cols-3 gap-4 animate-slide-in-right">
-                      <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-600/30 animate-float-slow">
-                        <div className="w-6 h-6 bg-blue-400 rounded mb-2 animate-pulse"></div>
-                        <div className="text-white text-sm font-medium">Fast Loading</div>
-                        <div className="text-gray-400 text-xs">Optimized performance</div>
-                      </div>
-                      <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-600/30 animate-float-medium">
-                        <div className="w-6 h-6 bg-green-400 rounded mb-2 animate-pulse delay-100"></div>
-                        <div className="text-white text-sm font-medium">Mobile Ready</div>
-                        <div className="text-gray-400 text-xs">Responsive design</div>
-                      </div>
-                      <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-600/30 animate-float-fast">
-                        <div className="w-6 h-6 bg-purple-400 rounded mb-2 animate-pulse delay-200"></div>
-                        <div className="text-white text-sm font-medium">AI Powered</div>
-                        <div className="text-gray-400 text-xs">Smart automation</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating AI Chat Widget */}
-              <div className="absolute bottom-20 right-10 z-20 animate-float-chat">
-                <div className="bg-gradient-to-r from-cyan-500/90 to-blue-600/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-cyan-400/30 max-w-sm">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                      <Brain className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <div className="text-white font-medium text-sm">AI Assistant</div>
-                      <div className="text-cyan-100 text-xs flex items-center">
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-1 animate-pulse"></div>
-                        Online
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2 mb-3">
-                    <div className="bg-white/10 rounded-lg p-2 animate-message-appear">
-                      <div className="text-white text-xs">👋 Hi! How can I help you today?</div>
-                    </div>
-                    <div className="bg-white/20 rounded-lg p-2 ml-4 animate-message-appear delay-1000">
-                      <div className="text-white text-xs">I need a website for my business</div>
-                    </div>
-                    <div className="bg-white/10 rounded-lg p-2 animate-message-appear delay-2000">
-                      <div className="text-white text-xs">
-                        Perfect! I can help you create a professional website. What type of business do you have?
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-2">
-                    <div className="flex-1 bg-white/10 rounded-full px-3 py-1">
-                      <div className="text-white/60 text-xs animate-typing-dots">Typing...</div>
-                    </div>
-                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                      <ArrowRight className="w-3 h-3 text-white" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Mobile Mockup */}
-              <div className="absolute top-20 left-10 z-15 animate-float-mobile">
-                <div className="bg-gray-900/80 backdrop-blur-sm rounded-3xl p-2 shadow-2xl border border-gray-700/50 w-48">
-                  <div className="bg-gray-800 rounded-2xl overflow-hidden">
-                    {/* Mobile Header */}
-                    <div className="bg-gray-900 px-4 py-2 flex items-center justify-center">
-                      <div className="w-12 h-1 bg-gray-600 rounded-full"></div>
-                    </div>
-
-                    {/* Mobile Content */}
-                    <div className="p-4 space-y-3">
-                      <div className="text-center">
-                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-2 animate-spin-slow"></div>
-                        <div className="text-white text-sm font-bold">Mobile App</div>
-                        <div className="text-gray-400 text-xs">Responsive Design</div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <div className="bg-gray-700/50 rounded p-2 animate-slide-in-left">
-                          <div className="w-full h-2 bg-blue-400/50 rounded animate-progress"></div>
-                        </div>
-                        <div className="bg-gray-700/50 rounded p-2 animate-slide-in-right">
-                          <div className="w-3/4 h-2 bg-green-400/50 rounded animate-progress delay-500"></div>
-                        </div>
-                        <div className="bg-gray-700/50 rounded p-2 animate-slide-in-left">
-                          <div className="w-1/2 h-2 bg-purple-400/50 rounded animate-progress delay-1000"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Analytics Dashboard */}
-              <div className="absolute top-40 right-5 z-15 animate-float-analytics">
-                <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 shadow-2xl border border-gray-700/50 w-64">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="text-white font-medium text-sm">Analytics</div>
-                    <div className="text-green-400 text-xs flex items-center">
-                      <TrendingUp className="w-3 h-3 mr-1" />
-                      +24%
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-xs">Visitors</span>
-                      <span className="text-white text-sm font-bold animate-counter">1,247</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-xs">Conversions</span>
-                      <span className="text-green-400 text-sm font-bold animate-counter delay-300">89</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-xs">AI Interactions</span>
-                      <span className="text-blue-400 text-sm font-bold animate-counter delay-600">342</span>
-                    </div>
-
-                    {/* Mini Chart */}
-                    <div className="flex items-end space-x-1 h-8">
-                      <div className="bg-blue-500/50 w-2 h-4 rounded animate-bar-grow"></div>
-                      <div className="bg-blue-500/70 w-2 h-6 rounded animate-bar-grow delay-100"></div>
-                      <div className="bg-blue-500 w-2 h-8 rounded animate-bar-grow delay-200"></div>
-                      <div className="bg-blue-500/80 w-2 h-5 rounded animate-bar-grow delay-300"></div>
-                      <div className="bg-blue-500/60 w-2 h-7 rounded animate-bar-grow delay-400"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Code Editor */}
-              <div className="absolute bottom-10 left-5 z-15 animate-float-code">
-                <div className="bg-gray-900/90 backdrop-blur-sm rounded-lg p-4 shadow-2xl border border-gray-700/50 w-72">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    </div>
-                    <div className="text-gray-400 text-xs">app.js</div>
-                  </div>
-
-                  <div className="font-mono text-xs space-y-1">
-                    <div className="text-purple-400 animate-type-line">import &#123; AI &#125; from 'openai'</div>
-                    <div className="text-blue-400 animate-type-line delay-500">const assistant = new AI(&#123;</div>
-                    <div className="text-green-400 animate-type-line delay-1000"> model: 'gpt-4',</div>
-                    <div className="text-yellow-400 animate-type-line delay-1500"> temperature: 0.7</div>
-                    <div className="text-blue-400 animate-type-line delay-2000">&#125;)</div>
-                    <div className="text-gray-400 animate-type-line delay-2500">// AI-powered features</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Main Content Overlay */}
-          <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="animate-fade-in-up">
-              <h1 id="hero-heading" className="text-responsive-5xl font-bold mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                  Custom Web Development
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                  & AI Integration
-                </span>
-              </h1>
+          {/* Main Content Area with Better Contrast */}
+          <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              {/* Main Content Background for Better Readability */}
+              <div className="relative">
+                {/* Content Background Overlay */}
+                <div className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm rounded-3xl -m-8 border border-gray-700/30"></div>
 
-              <p className="text-responsive-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Transform your business with cutting-edge web solutions and intelligent AI integration. From concept to
-                deployment, I deliver exceptional digital experiences.
-              </p>
+                {/* Main Content */}
+                <div className="relative z-10 py-16 px-8">
+                  <div className="animate-fade-in-up">
+                    <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                      <span className="block bg-gradient-to-r from-white to-gray-100 bg-clip-text text-transparent drop-shadow-lg">
+                        Custom Web Development
+                      </span>
+                      <span className="block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
+                        & AI Integration
+                      </span>
+                    </h1>
 
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-responsive-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                  onClick={() => scrollToSection("portfolio")}
-                  aria-describedby="portfolio-button-description"
-                >
-                  See Portfolio
-                  <ArrowRight className="ml-2" size={20} aria-hidden="true" />
-                  <span id="portfolio-button-description" className="sr-only">
-                    View featured projects and case studies
-                  </span>
-                </Button>
+                    <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+                      Transform your business with cutting-edge web solutions and intelligent AI integration. From
+                      concept to deployment, I deliver exceptional digital experiences.
+                    </p>
 
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-responsive-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-                  onClick={() => scrollToSection("contact")}
-                  aria-describedby="quote-button-description"
-                >
-                  Get a Quote
-                  <span id="quote-button-description" className="sr-only">
-                    Contact us for a free project consultation
-                  </span>
-                </Button>
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                      <Button
+                        size="lg"
+                        className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        onClick={() => scrollToSection("portfolio")}
+                        aria-describedby="portfolio-button-description"
+                      >
+                        See Portfolio
+                        <ArrowRight className="ml-2" size={20} aria-hidden="true" />
+                        <span id="portfolio-button-description" className="sr-only">
+                          View featured projects and case studies
+                        </span>
+                      </Button>
+
+                      <Button
+                        size="lg"
+                        variant="outline"
+                        className="border-2 border-white/80 text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 backdrop-blur-sm"
+                        onClick={() => scrollToSection("contact")}
+                        aria-describedby="quote-button-description"
+                      >
+                        Get a Quote
+                        <span id="quote-button-description" className="sr-only">
+                          Contact us for a free project consultation
+                        </span>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Side Floating Elements - Positioned to not interfere with main content */}
+          <div className="absolute inset-0 pointer-events-none hidden lg:block">
+            {/* Left Side - AI Chat Widget */}
+            <div className="absolute left-8 top-1/2 transform -translate-y-1/2 animate-float-chat opacity-80">
+              <div className="bg-gradient-to-r from-cyan-500/90 to-blue-600/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-cyan-400/30 max-w-xs">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                    <Brain className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-white font-medium text-sm">AI Assistant</div>
+                    <div className="text-cyan-100 text-xs flex items-center">
+                      <div className="w-2 h-2 bg-green-400 rounded-full mr-1 animate-pulse"></div>
+                      Online
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-2 mb-3">
+                  <div className="bg-white/10 rounded-lg p-2 animate-message-appear">
+                    <div className="text-white text-xs">👋 Hi! How can I help you today?</div>
+                  </div>
+                  <div className="bg-white/20 rounded-lg p-2 ml-4 animate-message-appear delay-1000">
+                    <div className="text-white text-xs">I need a website for my business</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-2 animate-message-appear delay-2000">
+                    <div className="text-white text-xs">Perfect! I can help you create a professional website.</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-2">
+                  <div className="flex-1 bg-white/10 rounded-full px-3 py-1">
+                    <div className="text-white/60 text-xs animate-typing-dots">Typing...</div>
+                  </div>
+                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-3 h-3 text-white" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Analytics Dashboard */}
+            <div className="absolute right-8 top-1/2 transform -translate-y-1/2 animate-float-analytics opacity-80">
+              <div className="bg-gray-800/90 backdrop-blur-sm rounded-xl p-4 shadow-2xl border border-gray-700/50 max-w-xs">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-white font-medium text-sm">Analytics</div>
+                  <div className="text-green-400 text-xs flex items-center">
+                    <TrendingUp className="w-3 h-3 mr-1" />
+                    +24%
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-xs">Visitors</span>
+                    <span className="text-white text-sm font-bold animate-counter">1,247</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-xs">Conversions</span>
+                    <span className="text-green-400 text-sm font-bold animate-counter delay-300">89</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-xs">AI Interactions</span>
+                    <span className="text-blue-400 text-sm font-bold animate-counter delay-600">342</span>
+                  </div>
+
+                  {/* Mini Chart */}
+                  <div className="flex items-end space-x-1 h-8">
+                    <div className="bg-blue-500/50 w-2 h-4 rounded animate-bar-grow"></div>
+                    <div className="bg-blue-500/70 w-2 h-6 rounded animate-bar-grow delay-100"></div>
+                    <div className="bg-blue-500 w-2 h-8 rounded animate-bar-grow delay-200"></div>
+                    <div className="bg-blue-500/80 w-2 h-5 rounded animate-bar-grow delay-300"></div>
+                    <div className="bg-blue-500/60 w-2 h-7 rounded animate-bar-grow delay-400"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Showcase - Website Preview */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 pointer-events-none hidden md:block">
+            <div className="bg-gray-800/60 backdrop-blur-sm rounded-xl border border-gray-700/50 shadow-2xl overflow-hidden opacity-60 animate-pulse-glow">
+              {/* Browser Header */}
+              <div className="bg-gray-900/90 px-4 py-2 flex items-center space-x-2 border-b border-gray-700/50">
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse delay-100"></div>
+                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse delay-200"></div>
+                </div>
+                <div className="flex-1 bg-gray-800/50 rounded-md px-3 py-1 ml-4">
+                  <div className="text-gray-400 text-sm font-mono animate-typing">https://your-business.com</div>
+                </div>
+              </div>
+
+              {/* Website Preview Content */}
+              <div className="p-4 space-y-3">
+                <div className="flex items-center justify-between animate-slide-in-left">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg animate-spin-slow"></div>
+                    <div className="text-white font-bold text-sm">Your Business</div>
+                  </div>
+                  <div className="flex space-x-4 text-xs text-gray-300">
+                    <span>Home</span>
+                    <span>Services</span>
+                    <span>Contact</span>
+                  </div>
+                </div>
+
+                <div className="text-center py-4 animate-fade-in-up">
+                  <h2 className="text-lg font-bold text-white mb-2 animate-text-shimmer">
+                    Transform Your Business Online
+                  </h2>
+                  <div className="inline-flex bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm animate-bounce-subtle">
+                    Get Started
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-30" aria-hidden="true">
-            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce z-30" aria-hidden="true">
+            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
         </section>
