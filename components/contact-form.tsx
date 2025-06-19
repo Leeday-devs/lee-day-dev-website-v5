@@ -54,7 +54,7 @@ export function ContactForm() {
     try {
       // Simulate form submission - in a real app, this would send to your backend
       const emailData = {
-        to: "leedaydevs@gmail.com",
+        to: "LeeDayDevs@gmail.com",
         subject: `New Quote Request from ${formData.name}`,
         body: `
 Name: ${formData.name}
@@ -258,35 +258,40 @@ Submitted: ${new Date().toLocaleString()}
         <div className="bg-gray-800/50 p-6 rounded-2xl border border-gray-700">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center">
             <MapPin className="w-5 h-5 text-blue-400 mr-2" />
-            Service Areas
+            Office Location
           </h3>
 
           {/* Map Container */}
           <div className="relative h-64 bg-gray-900/50 rounded-lg border border-gray-600 overflow-hidden mb-4">
             <img
-              src="/placeholder.svg?height=256&width=400&text=London+%26+Windsor+Service+Areas"
-              alt="Service area map showing London and Windsor locations where Lee Day provides web development and AI integration services"
+              src="/placeholder.svg?height=256&width=400&text=Paul+Street+London+Office+Location"
+              alt="Office location map showing Paul Street, London EC2A 4NE where Lee Day provides web development and AI integration services"
               className="w-full h-full object-cover opacity-60"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
 
-            {/* Location Markers */}
-            <div className="absolute top-1/3 left-1/3 transform -translate-x-1/2 -translate-y-1/2">
+            {/* Location Marker */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse shadow-lg"></div>
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-white font-medium bg-gray-900/80 px-2 py-1 rounded whitespace-nowrap">
-                London
-              </div>
-            </div>
-            <div className="absolute top-2/3 right-1/3 transform translate-x-1/2 -translate-y-1/2">
-              <div className="w-4 h-4 bg-purple-500 rounded-full animate-pulse shadow-lg"></div>
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-white font-medium bg-gray-900/80 px-2 py-1 rounded whitespace-nowrap">
-                Windsor
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-white font-medium bg-gray-900/80 px-3 py-1 rounded whitespace-nowrap">
+                Paul Street, London
               </div>
             </div>
           </div>
 
-          <p className="text-gray-300 text-sm">
-            Serving clients across London, Windsor, and surrounding areas. Remote collaboration available worldwide.
+          <div className="bg-gray-900/30 p-4 rounded-lg border border-gray-700/50">
+            <p className="text-white font-medium mb-2">Office Address:</p>
+            <address className="text-gray-300 text-sm not-italic leading-relaxed">
+              3rd Floor 86-90, Paul Street
+              <br />
+              London EC2A 4NE
+              <br />
+              United Kingdom
+            </address>
+          </div>
+
+          <p className="text-gray-300 text-sm mt-4">
+            Located in the heart of London's tech district. Remote collaboration available worldwide.
           </p>
         </div>
 
@@ -303,10 +308,10 @@ Submitted: ${new Date().toLocaleString()}
               <div>
                 <p className="text-white font-medium">Phone</p>
                 <a
-                  href="tel:+447123456789"
+                  href="tel:+447586266007"
                   className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                 >
-                  +44-7123-456789
+                  +44-7586-266007
                 </a>
               </div>
             </div>
@@ -319,10 +324,10 @@ Submitted: ${new Date().toLocaleString()}
               <div>
                 <p className="text-white font-medium">Email</p>
                 <a
-                  href="mailto:leedaydevs@gmail.com"
+                  href="mailto:LeeDayDevs@gmail.com"
                   className="text-gray-400 hover:text-green-400 transition-colors duration-300"
                 >
-                  leedaydevs@gmail.com
+                  LeeDayDevs@gmail.com
                 </a>
               </div>
             </div>
@@ -334,7 +339,7 @@ Submitted: ${new Date().toLocaleString()}
               </div>
               <div>
                 <p className="text-white font-medium">Location</p>
-                <p className="text-gray-400">London & Windsor, UK</p>
+                <p className="text-gray-400">Paul Street, London EC2A 4NE</p>
               </div>
             </div>
 

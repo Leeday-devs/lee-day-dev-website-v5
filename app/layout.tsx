@@ -50,9 +50,9 @@ export const metadata: Metadata = {
   },
   other: {
     "geo.region": "GB",
-    "geo.placename": "London, Windsor",
-    "geo.position": "51.5074;-0.1278",
-    ICBM: "51.5074, -0.1278",
+    "geo.placename": "London",
+    "geo.position": "51.5254;-0.0863",
+    ICBM: "51.5254, -0.0863",
   },
     generator: 'v0.dev'
 }
@@ -90,8 +90,8 @@ export default function RootLayout({
               description:
                 "Professional web development and AI integration services specializing in custom websites, hosting solutions, and intelligent automation for UK businesses.",
               url: "https://leeday.dev",
-              telephone: "+44-7123-456789",
-              email: "leedaydevs@gmail.com",
+              telephone: "+44-7586-266007",
+              email: "LeeDayDevs@gmail.com",
               priceRange: "££-£££",
               currenciesAccepted: "GBP",
               paymentAccepted: "Cash, Credit Card, Bank Transfer",
@@ -100,10 +100,11 @@ export default function RootLayout({
 
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "3rd Floor 86-90, Paul Street",
                 addressLocality: "London",
                 addressRegion: "England",
                 addressCountry: "GB",
-                postalCode: "SW1A 1AA",
+                postalCode: "EC2A 4NE",
               },
 
               areaServed: [
@@ -125,8 +126,8 @@ export default function RootLayout({
 
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: "51.5074",
-                longitude: "-0.1278",
+                latitude: "51.5254",
+                longitude: "-0.0863",
               },
 
               founder: {
@@ -276,14 +277,14 @@ export default function RootLayout({
               contactPoint: [
                 {
                   "@type": "ContactPoint",
-                  telephone: "+44-7123-456789",
+                  telephone: "+44-7586-266007",
                   contactType: "customer service",
                   availableLanguage: ["English"],
                   areaServed: "GB",
                 },
                 {
                   "@type": "ContactPoint",
-                  email: "leedaydevs@gmail.com",
+                  email: "LeeDayDevs@gmail.com",
                   contactType: "customer service",
                   availableLanguage: ["English"],
                   areaServed: "GB",

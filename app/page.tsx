@@ -816,10 +816,10 @@ export default function HomePage() {
                     <span className="text-blue-400 text-xs">📞</span>
                   </div>
                   <a
-                    href="tel:+447123456789"
+                    href="tel:+447586266007"
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
                   >
-                    +44-7123-456789
+                    +44-7586-266007
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -827,17 +827,17 @@ export default function HomePage() {
                     <span className="text-green-400 text-xs">✉</span>
                   </div>
                   <a
-                    href="mailto:leedaydevs@gmail.com"
+                    href="mailto:LeeDayDevs@gmail.com"
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 rounded-md p-1"
                   >
-                    leedaydevs@gmail.com
+                    LeeDayDevs@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-5 h-5 bg-purple-500/20 rounded flex items-center justify-center" aria-hidden="true">
                     <span className="text-purple-400 text-xs">📍</span>
                   </div>
-                  <span className="text-gray-400 text-responsive-sm">London & Windsor, UK</span>
+                  <span className="text-gray-400 text-responsive-sm">Paul Street, London EC2A 4NE</span>
                 </div>
               </address>
 
