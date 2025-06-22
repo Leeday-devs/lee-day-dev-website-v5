@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Code, Brain, Zap, CheckCircle, Smartphone, Globe, Database, Cpu, Bot, Layers, Terminal, Wifi, Cloud, Rocket, Settings, Monitor, Mail, Phone, MapPin, Clock } from "lucide-react"
+import { ArrowRight, Code, Brain, Zap, CheckCircle, Smartphone, Globe, Database, Cpu, Bot, Layers, Terminal, Wifi, Cloud, Rocket, Settings, Monitor, Mail, Phone, MapPin, Clock, Users } from "lucide-react"
 import { PortfolioCarousel } from "@/components/portfolio-carousel"
 import { ContactForm } from "@/components/contact-form"
 import { AccessibleNavigation } from "@/components/accessible-navigation"
@@ -330,16 +330,70 @@ export default function HomePage() {
               <div className="text-center mb-16">
                 <h2 id="portfolio-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
                   <span className="gradient-text-animated">
-                    Featured Portfolio Projects
+                    Comprehensive Portfolio Showcase
                   </span>
                 </h2>
                 <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
-                  Explore some of my recent projects showcasing custom development, AI integration, and comprehensive
-                  hosting solutions
+                  Discover our end-to-end web development capabilities through diverse projects - from building websites from scratch to modernizing existing platforms with enhanced functionality and performance
                 </p>
               </div>
 
               <PortfolioCarousel />
+              
+              {/* Full-Service Process Overview */}
+              <div className="mt-20 text-center">
+                <h3 className="text-responsive-3xl font-bold mb-8 section-heading">
+                  <span className="gradient-text-animated">
+                    Our Full-Service Development Process
+                  </span>
+                </h3>
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                  {/* Consultation & Planning */}
+                  <div className="animated-card p-6 rounded-xl">
+                    <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Users className="w-8 h-8 text-blue-400" />
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-3">Consultation & Planning</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      In-depth discovery sessions to understand your business goals, target audience, and technical requirements. We create detailed project roadmaps and timelines.
+                    </p>
+                  </div>
+
+                  {/* Design & Development */}
+                  <div className="animated-card p-6 rounded-xl">
+                    <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Code className="w-8 h-8 text-purple-400" />
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-3">Design & Development</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Custom design creation and development using cutting-edge technologies. Regular progress updates and client feedback integration throughout the process.
+                    </p>
+                  </div>
+
+                  {/* Testing & Launch */}
+                  <div className="animated-card p-6 rounded-xl">
+                    <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Rocket className="w-8 h-8 text-green-400" />
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-3">Testing & Launch</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Comprehensive testing across devices and browsers, performance optimization, and smooth deployment with ongoing maintenance and support.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="mt-12">
+                  <Button
+                    size="lg"
+                    className="enhanced-button text-white px-8 py-4 text-responsive-lg font-semibold rounded-full"
+                    onClick={() => scrollToSection("contact")}
+                  >
+                    Start Your Project Today
+                    <ArrowRight className="ml-2" size={20} />
+                  </Button>
+                </div>
+              </div>
             </div>
           </section>
         </IntersectionObserver>
