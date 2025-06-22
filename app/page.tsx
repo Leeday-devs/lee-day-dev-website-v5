@@ -39,23 +39,56 @@ export default function HomePage() {
           className="relative min-h-screen flex items-center justify-center overflow-hidden"
           aria-labelledby="hero-heading"
         >
-          {/* Background Pattern */}
-          <div
-            className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20"
-            aria-hidden="true"
-          ></div>
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
-              backgroundSize: "20px 20px",
-            }}
-            aria-hidden="true"
-          ></div>
+          {/* Animated Background */}
+          <div className="hero-animated-bg" aria-hidden="true"></div>
+          
+          {/* Floating Code Elements */}
+          <div className="floating-elements" aria-hidden="true">
+            <div className="code-element">const website = new CustomSite();</div>
+            <div className="code-element">AI.integrate(chatbot, userExperience);</div>
+            <div className="code-element">deploy(project, 'production');</div>
+            <div className="code-element">function optimizePerformance() {}</div>
+            <div className="code-element">responsive.design.mobile.first;</div>
+          </div>
+          
+          {/* Neural Network Animation */}
+          <div className="neural-network" aria-hidden="true">
+            <div className="neural-node" style={{ top: '20%', left: '15%', animationDelay: '0s' }}></div>
+            <div className="neural-node" style={{ top: '40%', left: '25%', animationDelay: '1s' }}></div>
+            <div className="neural-node" style={{ top: '60%', left: '35%', animationDelay: '2s' }}></div>
+            <div className="neural-node" style={{ top: '30%', left: '70%', animationDelay: '0.5s' }}></div>
+            <div className="neural-node" style={{ top: '50%', left: '80%', animationDelay: '1.5s' }}></div>
+            <div className="neural-node" style={{ top: '70%', left: '90%', animationDelay: '2.5s' }}></div>
+            
+            <div className="neural-connection" style={{ top: '25%', left: '18%', width: '150px', transform: 'rotate(25deg)', animationDelay: '0s' }}></div>
+            <div className="neural-connection" style={{ top: '45%', left: '28%', width: '120px', transform: 'rotate(-15deg)', animationDelay: '1s' }}></div>
+            <div className="neural-connection" style={{ top: '35%', left: '40%', width: '200px', transform: 'rotate(10deg)', animationDelay: '2s' }}></div>
+          </div>
+          
+          {/* Geometric Shapes */}
+          <div className="geometric-shapes" aria-hidden="true">
+            <div className="shape shape-1"></div>
+            <div className="shape shape-2"></div>
+            <div className="shape shape-3"></div>
+          </div>
+          
+          {/* Particle System */}
+          <div className="particles" aria-hidden="true">
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+          </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="animate-fade-in-up">
-              <h1 id="hero-heading" className="text-responsive-5xl font-bold mb-6 leading-tight">
+            <div className="animate-fade-in-up hero-content-backdrop">
+              <h1 id="hero-heading" className="text-responsive-5xl font-bold mb-6 leading-tight hero-text-shadow">
                 <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
                   Custom Web Development
                 </span>
@@ -65,7 +98,7 @@ export default function HomePage() {
                 </span>
               </h1>
 
-              <p className="text-responsive-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-responsive-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed hero-text-shadow">
                 Transform your business with cutting-edge web solutions and intelligent AI integration. From concept to
                 deployment, I deliver exceptional digital experiences.
               </p>
