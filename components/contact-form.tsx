@@ -96,7 +96,7 @@ Submitted: ${new Date().toLocaleString()}
   return (
     <div className="grid lg:grid-cols-2 gap-12 items-start">
       {/* Contact Form */}
-      <div className="bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+      <div className="animated-card glow-effect p-8 rounded-2xl">
         <h3 className="text-2xl font-bold text-white mb-6">Get Your Free Quote</h3>
 
         {submitStatus === "success" && (
@@ -235,7 +235,7 @@ Submitted: ${new Date().toLocaleString()}
           <Button
             type="submit"
             disabled={!isFormValid || isSubmitting}
-            className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:transform-none disabled:shadow-none"
+            className="w-full enhanced-button disabled:from-gray-600 disabled:to-gray-700 text-white px-8 py-4 text-lg font-semibold rounded-full disabled:transform-none disabled:shadow-none"
           >
             {isSubmitting ? (
               <>
@@ -255,9 +255,9 @@ Submitted: ${new Date().toLocaleString()}
       {/* Map and Contact Info */}
       <div className="space-y-8">
         {/* Map Placeholder */}
-        <div className="bg-gray-800/50 p-6 rounded-2xl border border-gray-700">
+        <div className="animated-card p-6 rounded-2xl">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-            <MapPin className="w-5 h-5 text-blue-400 mr-2" />
+            <MapPin className="w-5 h-5 text-blue-400 mr-2 pulse-accent" />
             Service Areas
           </h3>
 
@@ -291,7 +291,7 @@ Submitted: ${new Date().toLocaleString()}
         </div>
 
         {/* Contact Information */}
-        <div className="bg-gray-800/50 p-6 rounded-2xl border border-gray-700">
+        <div className="animated-card p-6 rounded-2xl">
           <h3 className="text-xl font-bold text-white mb-6">Get In Touch</h3>
 
           <div className="space-y-4">

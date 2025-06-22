@@ -85,10 +85,10 @@ export function PortfolioCarousel() {
           >
             {portfolioItems.map((item) => (
               <div key={item.id} className="w-full flex-shrink-0">
-                <div className="grid lg:grid-cols-2 gap-8 items-center bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                <div className="grid lg:grid-cols-2 gap-8 items-center animated-card glow-effect p-8 rounded-2xl">
                   {/* Image Section */}
                   <div className="relative group">
-                    <div className="relative overflow-hidden rounded-xl bg-gray-900 border border-gray-600">
+                    <div className="relative overflow-hidden rounded-xl animated-border">
                       <img
                         src={item.image || "/placeholder.svg"}
                         alt={`${item.name} - ${item.description} - Web development project by Lee Day`}
@@ -132,8 +132,7 @@ export function PortfolioCarousel() {
                     {/* Action Button */}
                     {item.url && (
                       <Button
-                        variant="outline"
-                        className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10 hover:border-blue-400"
+                        className="enhanced-button text-white"
                         onClick={() => window.open(item.url, "_blank")}
                       >
                         View Live Site
@@ -193,7 +192,7 @@ export function PortfolioCarousel() {
             </button>
 
             {/* Lightbox Content */}
-            <div className="bg-gray-900 rounded-2xl border border-gray-700 overflow-hidden">
+            <div className="animated-border rounded-2xl overflow-hidden">
               <div className="relative">
                 <img
                   src={lightboxImage.image || "/placeholder.svg"}
@@ -221,7 +220,7 @@ export function PortfolioCarousel() {
 
                 {lightboxImage.url && (
                   <Button
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+                    className="enhanced-button text-white"
                     onClick={() => window.open(lightboxImage.url, "_blank")}
                   >
                     View Live Site
