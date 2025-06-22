@@ -36,7 +36,7 @@ export default function HomePage() {
       <main id="main-content" tabIndex={-1} className="focus:outline-none">
         {/* Hero Section */}
         <section
-          className="relative min-h-screen flex items-center justify-center overflow-hidden"
+          className="section-hero"
           aria-labelledby="hero-heading"
         >
           {/* Animated Background */}
@@ -122,19 +122,19 @@ export default function HomePage() {
             <div className="particle"></div>
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="animate-fade-in-up hero-content-backdrop">
+          <div className="relative z-10 container text-center">
+            <div className="animate-fade-in hero-content-backdrop">
               <h1 id="hero-heading" className="text-responsive-5xl font-bold mb-6 leading-tight hero-text-shadow">
-                <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                <span className="text-gradient">
                   Custom Web Development
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="text-gradient-animated">
                   & AI Integration
                 </span>
               </h1>
 
-              <p className="text-responsive-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed hero-text-shadow">
+              <p className="section-subtitle hero-text-shadow">
                 Transform your business with cutting-edge web solutions and intelligent AI integration. From concept to
                 deployment, I deliver exceptional digital experiences.
               </p>
@@ -142,7 +142,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Button
                   size="lg"
-                  className="hero-primary-button bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-responsive-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 hero-text-shadow"
+                  className="btn-primary text-responsive-lg px-8 py-4 hero-text-shadow focus-visible"
                   onClick={() => scrollToSection("portfolio")}
                   aria-describedby="portfolio-button-description"
                 >
@@ -156,7 +156,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="hero-secondary-button border-2 border-white/80 text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-responsive-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/10 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 hero-text-shadow"
+                  className="btn-secondary text-responsive-lg px-8 py-4 hero-text-shadow focus-visible"
                   onClick={() => scrollToSection("contact")}
                   aria-describedby="quote-button-description"
                 >
@@ -181,7 +181,7 @@ export default function HomePage() {
         <IntersectionObserver>
           <section
             id="services"
-            className="py-20 bg-gray-800 scroll-mt-20 relative overflow-hidden"
+            className="section-secondary scroll-mt-20"
             aria-labelledby="services-heading"
             tabIndex={-1}
           >
@@ -216,21 +216,21 @@ export default function HomePage() {
               <div className="section-particle"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="container relative z-10">
               <div className="text-center mb-16">
-                <h2 id="services-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
-                  <span className="gradient-text-animated">
+                <h2 id="services-heading" className="section-heading">
+                  <span className="text-gradient-animated">
                     Professional Web Development Services
                   </span>
                 </h2>
-                <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="section-subtitle">
                   Comprehensive web and AI solutions tailored to your business needs
                 </p>
               </div>
 
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid-3">
                 {/* Custom Web Development */}
-                <article className="group animated-card glow-effect p-8 rounded-2xl transition-all duration-500">
+                <article className="group card-primary hover-lift">
                   <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                     <Code className="w-16 h-16 text-blue-400 group-hover:text-blue-300 pulse-accent" aria-hidden="true" />
                   </div>
@@ -242,7 +242,7 @@ export default function HomePage() {
                     complex web applications that drive business growth.
                   </p>
                   <button
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-all duration-300 group-hover:translate-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-all duration-300 group-hover:translate-x-2 focus-visible p-1"
                     aria-label="Learn more about custom web development services"
                   >
                     Learn More
@@ -251,7 +251,7 @@ export default function HomePage() {
                 </article>
 
                 {/* Hosting & Maintenance */}
-                <article className="group animated-card glow-effect p-8 rounded-2xl transition-all duration-500">
+                <article className="group card-primary hover-lift">
                   <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                     <Zap className="w-16 h-16 text-green-400 group-hover:text-green-300 pulse-accent" aria-hidden="true" />
                   </div>
@@ -263,7 +263,7 @@ export default function HomePage() {
                     running smoothly with proactive monitoring.
                   </p>
                   <button
-                    className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold transition-all duration-300 group-hover:translate-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 rounded-md p-1"
+                    className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold transition-all duration-300 group-hover:translate-x-2 focus-visible p-1"
                     aria-label="Learn more about hosting and maintenance services"
                   >
                     Learn More
@@ -272,7 +272,7 @@ export default function HomePage() {
                 </article>
 
                 {/* AI Assistant Integration */}
-                <article className="group animated-card glow-effect p-8 rounded-2xl transition-all duration-500 md:col-span-2 lg:col-span-1">
+                <article className="group card-primary hover-lift md:col-span-2 lg:col-span-1">
                   <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                     <Brain className="w-16 h-16 text-purple-400 group-hover:text-purple-300 pulse-accent" aria-hidden="true" />
                   </div>
@@ -284,7 +284,7 @@ export default function HomePage() {
                     streamline business processes with smart automation.
                   </p>
                   <button
-                    className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-all duration-300 group-hover:translate-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 rounded-md p-1"
+                    className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-all duration-300 group-hover:translate-x-2 focus-visible p-1"
                     aria-label="Learn more about AI assistant integration services"
                   >
                     Learn More
@@ -300,7 +300,7 @@ export default function HomePage() {
         <IntersectionObserver>
           <section
             id="portfolio"
-            className="py-20 bg-gray-900 scroll-mt-20 relative overflow-hidden"
+            className="section-primary scroll-mt-20"
             aria-labelledby="portfolio-heading"
             tabIndex={-1}
           >
@@ -326,14 +326,14 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="container relative z-10">
               <div className="text-center mb-16">
-                <h2 id="portfolio-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
-                  <span className="gradient-text-animated">
+                <h2 id="portfolio-heading" className="section-heading">
+                  <span className="text-gradient-animated">
                     Website Design & Development Portfolio
                   </span>
                 </h2>
-                <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="section-subtitle">
                   Explore my recent website design and development projects showcasing modern, responsive designs 
                   and cutting-edge development techniques across various industries
                 </p>
@@ -344,14 +344,14 @@ export default function HomePage() {
               {/* Full-Service Process Overview */}
               <div className="mt-20 text-center">
                 <h3 className="text-responsive-3xl font-bold mb-8 section-heading">
-                  <span className="gradient-text-animated">
+                  <span className="text-gradient-animated">
                     Our Full-Service Development Process
                   </span>
                 </h3>
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div className="grid-3 mt-12">
                   {/* Consultation & Planning */}
-                  <div className="animated-card p-6 rounded-xl">
+                  <div className="card-secondary hover-lift">
                     <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-8 h-8 text-blue-400" />
                     </div>
@@ -362,7 +362,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Design & Development */}
-                  <div className="animated-card p-6 rounded-xl">
+                  <div className="card-secondary hover-lift">
                     <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Code className="w-8 h-8 text-purple-400" />
                     </div>
@@ -373,7 +373,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Testing & Launch */}
-                  <div className="animated-card p-6 rounded-xl">
+                  <div className="card-secondary hover-lift">
                     <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Rocket className="w-8 h-8 text-green-400" />
                     </div>
@@ -387,7 +387,7 @@ export default function HomePage() {
                 <div className="mt-12">
                   <Button
                     size="lg"
-                    className="enhanced-button text-white px-8 py-4 text-responsive-lg font-semibold rounded-full"
+                    className="btn-primary text-responsive-lg px-8 py-4"
                     onClick={() => scrollToSection("contact")}
                   >
                     Start Your Project Today
@@ -402,7 +402,7 @@ export default function HomePage() {
 
         {/* About Section */}
         <IntersectionObserver>
-          <section id="about" className="py-20 bg-gray-900 scroll-mt-20 relative overflow-hidden" aria-labelledby="about-heading" tabIndex={-1}>
+          <section id="about" className="section-primary scroll-mt-20" aria-labelledby="about-heading" tabIndex={-1}>
             {/* Animated Background */}
             <div className="section-animated-bg-alt" aria-hidden="true"></div>
             
@@ -425,17 +425,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="container relative z-10">
+              <div className="grid-2 gap-12 items-center">
                 {/* Photo Section */}
-                <div className="relative animate-slide-in-left">
-                  <div className="relative mx-auto lg:mx-0 w-80 h-80 rounded-2xl overflow-hidden animated-border glow-effect">
+                <div className="relative animate-slide-up">
+                  <div className="relative mx-auto lg:mx-0 w-80 h-80 rounded-2xl overflow-hidden card-primary aspect-square">
                     <OptimizedImage
                       src="/placeholder.svg?height=320&width=320"
                       alt="Lee Day - Professional Web Developer and AI Integration Specialist based in London and Windsor"
                       width={320}
                       height={320}
-                      className="w-full h-full object-cover"
+                      className="img-cover"
                       priority={false}
                       placeholder="Professional headshot loading..."
                     />
@@ -453,10 +453,10 @@ export default function HomePage() {
                 </div>
 
                 {/* Biography Section */}
-                <div className="animate-slide-in-right">
+                <div className="animate-slide-up">
                   <div className="mb-6">
                     <h2 id="about-heading" className="text-responsive-4xl font-bold mb-2 section-heading">
-                      <span className="gradient-text-animated">
+                      <span className="text-gradient-animated">
                         LD Web Development
                       </span>
                     </h2>
@@ -495,7 +495,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Trust Indicators */}
-                  <div className="animated-card rounded-xl p-6">
+                  <div className="card-secondary">
                     <h3 className="text-responsive-xl font-bold mb-4 text-white">Why Clients Trust Me</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                       <div className="text-center">
@@ -522,7 +522,7 @@ export default function HomePage() {
         <IntersectionObserver>
           <section
             id="contact"
-            className="py-20 bg-gray-800 scroll-mt-20 relative overflow-hidden"
+            className="section-secondary scroll-mt-20"
             aria-labelledby="contact-heading"
             tabIndex={-1}
           >
@@ -548,14 +548,14 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="container relative z-10">
               <div className="text-center mb-16">
-                <h2 id="contact-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
-                  <span className="gradient-text-animated">
+                <h2 id="contact-heading" className="section-heading">
+                  <span className="text-gradient-animated">
                     Contact LD Web Development
                   </span>
                 </h2>
-                <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="section-subtitle">
                   Ready to transform your business with modern web solutions? Get in touch for a free consultation and
                   personalized quote.
                 </p>
@@ -569,11 +569,11 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-gray-800 py-12 no-print" role="contentinfo">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <div className="text-responsive-2xl font-bold gradient-text-animated mb-4">
+              <div className="nav-logo text-responsive-2xl mb-4">
                 LD Web Development
               </div>
               <p className="text-gray-400 text-responsive-sm leading-relaxed mb-4">
@@ -583,14 +583,14 @@ export default function HomePage() {
               <div className="flex space-x-4" role="list" aria-label="Social media links">
                 <a
                   href="https://linkedin.com/in/leeday"
-                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300 focus-visible"
                   aria-label="LinkedIn profile"
                 >
                   <span className="text-xs text-gray-400 hover:text-white">Li</span>
                 </a>
                 <a
                   href="https://github.com/leeday"
-                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2"
+                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors duration-300 focus-visible"
                   aria-label="GitHub profile"
                 >
                   <span className="text-xs text-gray-400 hover:text-white">Gh</span>
@@ -613,7 +613,7 @@ export default function HomePage() {
                     <li key={item.id}>
                       <button
                         onClick={() => scrollToSection(item.id)}
-                        className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
+                        className="nav-link text-responsive-sm"
                       >
                         {item.label}
                       </button>
@@ -637,7 +637,7 @@ export default function HomePage() {
                   <li key={index}>
                     <a
                       href={`#${service.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
+                      className="nav-link text-responsive-sm"
                     >
                       {service}
                     </a>
@@ -656,7 +656,7 @@ export default function HomePage() {
                   </div>
                   <a
                     href="tel:07586266007"
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
+                    className="nav-link text-responsive-sm"
                   >
                     07586266007
                   </a>
@@ -667,7 +667,7 @@ export default function HomePage() {
                   </div>
                   <a
                     href="mailto:leedaydevs@gmail.com"
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 rounded-md p-1"
+                    className="nav-link text-responsive-sm"
                   >
                     leedaydevs@gmail.com
                   </a>
@@ -702,19 +702,19 @@ export default function HomePage() {
             <nav className="flex space-x-6 text-responsive-sm" aria-label="Legal links">
               <a
                 href="/privacy-policy"
-                className="text-gray-400 hover:text-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
+                className="nav-link"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms-of-service"
-                className="text-gray-400 hover:text-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
+                className="nav-link"
               >
                 Terms of Service
               </a>
               <a
                 href="/sitemap.xml"
-                className="text-gray-400 hover:text-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
+                className="nav-link"
               >
                 Sitemap
               </a>
@@ -724,4 +724,3 @@ export default function HomePage() {
       </footer>
     </div>
   )
-}
