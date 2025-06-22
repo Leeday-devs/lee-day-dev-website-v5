@@ -123,18 +123,18 @@ export default function HomePage() {
           </div>
 
           <div className="relative z-10 container text-center">
-            <div className="animate-fade-in hero-content-backdrop">
+            <div className="animate-fade-in-up hero-content-backdrop">
               <h1 id="hero-heading" className="text-responsive-5xl font-bold mb-6 leading-tight hero-text-shadow">
-                <span className="text-gradient">
+                <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
                   Custom Web Development
                 </span>
                 <br />
-                <span className="text-gradient-animated">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                   & AI Integration
                 </span>
               </h1>
 
-              <p className="section-subtitle hero-text-shadow">
+              <p className="text-responsive-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed hero-text-shadow">
                 Transform your business with cutting-edge web solutions and intelligent AI integration. From concept to
                 deployment, I deliver exceptional digital experiences.
               </p>
@@ -142,7 +142,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Button
                   size="lg"
-                  className="btn-primary text-responsive-lg px-8 py-4 hero-text-shadow focus-visible"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-responsive-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   onClick={() => scrollToSection("portfolio")}
                   aria-describedby="portfolio-button-description"
                 >
@@ -156,7 +156,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="btn-secondary text-responsive-lg px-8 py-4 hero-text-shadow focus-visible"
+                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-responsive-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
                   onClick={() => scrollToSection("contact")}
                   aria-describedby="quote-button-description"
                 >
@@ -194,21 +194,143 @@ export default function HomePage() {
                 <Code className="w-4 h-4" />
               </div>
               <div className="micro-icon">
-                <Globe className="w-4 h-4" />
+               <Brain className="w-4 h-4" />
+             </div>
+             <div className="micro-icon">
+               <Zap className="w-4 h-4" />
+             </div>
+             <div className="micro-icon">
+               <Globe className="w-4 h-4" />
+             </div>
+             <div className="micro-icon">
+               <Settings className="w-4 h-4" />
               </div>
             </div>
 
             <div className="container relative z-10">
               <div className="text-center mb-16">
-                <h2 id="services-heading" className="section-heading">
-                  <span className="text-gradient-animated">
-                    Our Services
+               <h2 id="services-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
+                 <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                   Professional Web Development Services
                   </span>
                 </h2>
-                <p className="section-subtitle">
-                  Comprehensive web development and AI integration solutions tailored to your business needs.
+               <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
+                 Comprehensive web and AI solutions tailored to your business needs
                 </p>
               </div>
+
+             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+               {/* Custom Web Development */}
+               <article className="group animated-card glow-effect p-8 rounded-2xl transition-all duration-500">
+                 <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                   <Code className="w-16 h-16 text-blue-400 group-hover:text-blue-300 pulse-accent" aria-hidden="true" />
+                 </div>
+                 <h3 className="text-responsive-2xl font-bold mb-4 group-hover:text-blue-300 transition-colors duration-300 text-white">
+                   Custom Web Development
+                 </h3>
+                 <p className="text-gray-300 mb-6 leading-relaxed text-responsive-base">
+                   Modern, responsive websites built with cutting-edge technologies. From sleek landing pages to
+                   complex web applications that drive business growth.
+                 </p>
+                 <button
+                   className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-all duration-300 group-hover:translate-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
+                   aria-label="Learn more about custom web development services"
+                 >
+                   Learn More
+                   <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+                 </button>
+               </article>
+
+               {/* Hosting & Maintenance */}
+               <article className="group animated-card glow-effect p-8 rounded-2xl transition-all duration-500">
+                 <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                   <Zap className="w-16 h-16 text-green-400 group-hover:text-green-300 pulse-accent" aria-hidden="true" />
+                 </div>
+                 <h3 className="text-responsive-2xl font-bold mb-4 group-hover:text-green-300 transition-colors duration-300 text-white">
+                   Hosting & Maintenance
+                 </h3>
+                 <p className="text-gray-300 mb-6 leading-relaxed text-responsive-base">
+                   Reliable hosting solutions with ongoing maintenance and support. Keep your website fast, secure, and
+                   running smoothly with proactive monitoring.
+                 </p>
+                 <button
+                   className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold transition-all duration-300 group-hover:translate-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 rounded-md p-1"
+                   aria-label="Learn more about hosting and maintenance services"
+                 >
+                   Learn More
+                   <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+                 </button>
+               </article>
+
+               {/* AI Assistant Integration */}
+               <article className="group animated-card glow-effect p-8 rounded-2xl transition-all duration-500 md:col-span-2 lg:col-span-1">
+                 <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                   <Brain className="w-16 h-16 text-purple-400 group-hover:text-purple-300 pulse-accent" aria-hidden="true" />
+                 </div>
+                 <h3 className="text-responsive-2xl font-bold mb-4 group-hover:text-purple-300 transition-colors duration-300 text-white">
+                   AI Assistant Integration
+                 </h3>
+                 <p className="text-gray-300 mb-6 leading-relaxed text-responsive-base">
+                   Intelligent chatbots and AI assistants that enhance user experience. Automate customer support and
+                   streamline business processes with smart automation.
+                 </p>
+                 <button
+                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-all duration-300 group-hover:translate-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 rounded-md p-1"
+                   aria-label="Learn more about AI assistant integration services"
+                 >
+                   Learn More
+                   <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+                 </button>
+               </article>
+             </div>
+            </div>
+          </section>
+        </IntersectionObserver>
+
+        {/* Portfolio Section */}
+        <IntersectionObserver>
+          <section
+            id="portfolio"
+            className="py-20 bg-gray-900 scroll-mt-20 relative overflow-hidden"
+            aria-labelledby="portfolio-heading"
+            tabIndex={-1}
+          >
+            {/* Animated Background */}
+            <div className="section-animated-bg-alt" aria-hidden="true"></div>
+            
+            {/* Floating Micro Icons */}
+            <div className="section-floating-icons" aria-hidden="true">
+              <div className="micro-icon">
+                <Monitor className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Smartphone className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Database className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Cloud className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Rocket className="w-4 h-4" />
+              </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div className="text-center mb-16">
+                <h2 id="portfolio-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
+                  <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    Featured Portfolio Projects
+                  </span>
+                </h2>
+                <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
+                  Explore some of my recent projects showcasing custom development, AI integration, and comprehensive
+                  hosting solutions
+                </p>
+              </div>
+
+              <PortfolioCarousel />
             </div>
           </section>
         </IntersectionObserver>
@@ -268,12 +390,12 @@ export default function HomePage() {
                 {/* Biography Section */}
                 <div className="animate-slide-up">
                   <div className="mb-6">
-                    <h2 id="about-heading" className="text-responsive-4xl font-bold mb-2 section-heading">
-                      <span className="text-gradient-animated">
-                        LD Web Development
+                    <h2 id="about-heading" className="text-responsive-4xl font-bold mb-2 section-heading text-white">
+                      <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                        Lee Day
                       </span>
                     </h2>
-                    <p className="text-responsive-xl text-blue-400 font-semibold mb-2">Founded by Lee Day - CEO & Lead Developer</p>
+                    <p className="text-responsive-xl text-blue-400 font-semibold mb-2">CEO & Lead Developer</p>
                     <p className="text-gray-400 flex items-center">
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-2" aria-hidden="true"></span>
                       London & Windsor
@@ -363,12 +485,12 @@ export default function HomePage() {
 
             <div className="container relative z-10">
               <div className="text-center mb-16">
-                <h2 id="contact-heading" className="section-heading">
-                  <span className="text-gradient-animated">
-                    Contact LD Web Development
+                <h2 id="contact-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
+                  <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    Contact Lee Day for Your Project
                   </span>
                 </h2>
-                <p className="section-subtitle">
+                <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
                   Ready to transform your business with modern web solutions? Get in touch for a free consultation and
                   personalized quote.
                 </p>
