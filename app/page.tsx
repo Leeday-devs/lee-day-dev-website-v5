@@ -194,6 +194,12 @@ export default function HomePage() {
                 <Code className="w-4 h-4" />
               </div>
               <div className="micro-icon">
+                <Globe className="w-4 h-4" />
+              </div>
+            </div>
+          </section>
+        </IntersectionObserver>
+
         {/* About Section */}
         <IntersectionObserver>
           <section id="about" className="section-primary scroll-mt-20" aria-labelledby="about-heading" tabIndex={-1}>
@@ -518,3 +524,4 @@ export default function HomePage() {
       </footer>
     </div>
   )
+}
