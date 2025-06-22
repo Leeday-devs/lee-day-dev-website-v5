@@ -11,37 +11,37 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Lee Day – Custom Web Development & AI Integration UK",
+  title: "LD Web Development – Custom Web Development & AI Integration UK",
   description:
-    "Professional web development & AI integration services in London & Windsor. Custom websites, hosting, AI chatbots & automation solutions for UK businesses.",
+    "Professional web development & AI integration services worldwide. Custom websites, hosting, AI chatbots & automation solutions for businesses globally.",
   keywords:
-    "web development, AI integration, custom websites, hosting, chatbots, London, Windsor, UK, responsive design, e-commerce, automation",
+    "web development, AI integration, custom websites, hosting, chatbots, London, UK, worldwide, responsive design, e-commerce, automation",
   authors: [{ name: "Lee Day", url: "https://leeday.dev" }],
   creator: "Lee Day",
-  publisher: "Lee Day - Web & AI Solutions",
+  publisher: "LD Web Development",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://leeday.dev",
-    title: "Lee Day – Custom Web Development & AI Integration UK",
+    title: "LD Web Development – Custom Web Development & AI Integration UK",
     description:
-      "Professional web development & AI integration services in London & Windsor. Custom websites, hosting, AI chatbots & automation solutions for UK businesses.",
-    siteName: "Lee Day - Web & AI Solutions",
+      "Professional web development & AI integration services worldwide. Custom websites, hosting, AI chatbots & automation solutions for businesses globally.",
+    siteName: "LD Web Development",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Lee Day - Web Development & AI Integration Services",
+        alt: "LD Web Development - Web Development & AI Integration Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lee Day – Custom Web Development & AI Integration UK",
+    title: "LD Web Development – Custom Web Development & AI Integration UK",
     description:
-      "Professional web development & AI integration services in London & Windsor. Custom websites, hosting, AI chatbots & automation solutions.",
+      "Professional web development & AI integration services worldwide. Custom websites, hosting, AI chatbots & automation solutions.",
     images: ["/og-image.jpg"],
     creator: "@leedaydev",
   },
@@ -85,10 +85,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "@id": "https://leeday.dev/#business",
-              name: "Lee Day - Web & AI Solutions",
+              name: "LD Web Development",
               alternateName: "LD Development",
               description:
-                "Professional web development and AI integration services specializing in custom websites, hosting solutions, and intelligent automation for UK businesses.",
+                "Professional web development and AI integration services specializing in custom websites, hosting solutions, and intelligent automation for businesses worldwide.",
               url: "https://leeday.dev",
               telephone: "07586266007",
               email: "leedaydevs@gmail.com",
@@ -174,7 +174,7 @@ export default function RootLayout({
                       category: "Web Development",
                       provider: {
                         "@type": "ProfessionalService",
-                        name: "Lee Day - Web & AI Solutions",
+                        name: "LD Web Development",
                       },
                     },
                     priceSpecification: {
@@ -192,7 +192,7 @@ export default function RootLayout({
                       category: "AI Development",
                       provider: {
                         "@type": "ProfessionalService",
-                        name: "Lee Day - Web & AI Solutions",
+                        name: "LD Web Development",
                       },
                     },
                     priceSpecification: {
@@ -210,7 +210,7 @@ export default function RootLayout({
                       category: "Web Hosting",
                       provider: {
                         "@type": "ProfessionalService",
-                        name: "Lee Day - Web & AI Solutions",
+                        name: "LD Web Development",
                       },
                     },
                     priceSpecification: {
