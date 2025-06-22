@@ -762,8 +762,8 @@ export default function HomePage() {
                   </span>
                 </h2>
                 <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
-                  Ready to transform your business with modern web solutions? Get in touch for a free consultation and 
-                  personalized quote. Available for in-person meetings in London or remote consultations worldwide.
+                  Ready to transform your business with modern web solutions? Get in touch for a free consultation and
+                  personalized quote.
                 </p>
               </div>
 
@@ -779,8 +779,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <div className="text-responsive-xl font-bold gradient-text-animated mb-4">
-                LD Web Development
+              <div className="text-responsive-2xl font-bold gradient-text-animated mb-4">
+                Lee Day
               </div>
               <p className="text-gray-400 text-responsive-sm leading-relaxed mb-4">
                 Professional web development and AI integration services. Creating modern, responsive websites that
