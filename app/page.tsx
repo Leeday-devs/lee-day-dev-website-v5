@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Code, Brain, Zap, CheckCircle } from "lucide-react"
+import { ArrowRight, Code, Brain, Zap, CheckCircle, Smartphone, Globe, Database, Cpu, Bot, Layers, Terminal, Wifi, Cloud, Rocket, Settings, Monitor } from "lucide-react"
 import { PortfolioCarousel } from "@/components/portfolio-carousel"
 import { ContactForm } from "@/components/contact-form"
 import { AccessibleNavigation } from "@/components/accessible-navigation"
@@ -42,13 +42,56 @@ export default function HomePage() {
           {/* Animated Background */}
           <div className="hero-animated-bg" aria-hidden="true"></div>
           
-          {/* Floating Code Elements */}
-          <div className="floating-elements" aria-hidden="true">
-            <div className="code-element">const website = new CustomSite();</div>
-            <div className="code-element">AI.integrate(chatbot, userExperience);</div>
-            <div className="code-element">deploy(project, 'production');</div>
-            <div className="code-element">function optimizePerformance() {}</div>
-            <div className="code-element">responsive.design.mobile.first;</div>
+          {/* Floating Tech Icons */}
+          <div className="floating-tech-icons" aria-hidden="true">
+            {/* Web Development Icons */}
+            <div className="floating-icon icon-1">
+              <Code className="w-8 h-8" />
+            </div>
+            <div className="floating-icon icon-2">
+              <Globe className="w-6 h-6" />
+            </div>
+            <div className="floating-icon icon-3">
+              <Smartphone className="w-7 h-7" />
+            </div>
+            <div className="floating-icon icon-4">
+              <Monitor className="w-8 h-8" />
+            </div>
+            <div className="floating-icon icon-5">
+              <Database className="w-6 h-6" />
+            </div>
+            <div className="floating-icon icon-6">
+              <Terminal className="w-7 h-7" />
+            </div>
+            <div className="floating-icon icon-7">
+              <Layers className="w-6 h-6" />
+            </div>
+            <div className="floating-icon icon-8">
+              <Cloud className="w-8 h-8" />
+            </div>
+            
+            {/* AI & Tech Icons */}
+            <div className="floating-icon icon-9">
+              <Brain className="w-8 h-8" />
+            </div>
+            <div className="floating-icon icon-10">
+              <Bot className="w-7 h-7" />
+            </div>
+            <div className="floating-icon icon-11">
+              <Cpu className="w-6 h-6" />
+            </div>
+            <div className="floating-icon icon-12">
+              <Zap className="w-7 h-7" />
+            </div>
+            <div className="floating-icon icon-13">
+              <Settings className="w-6 h-6" />
+            </div>
+            <div className="floating-icon icon-14">
+              <Wifi className="w-7 h-7" />
+            </div>
+            <div className="floating-icon icon-15">
+              <Rocket className="w-8 h-8" />
+            </div>
           </div>
           
           {/* Neural Network Animation */}
@@ -63,13 +106,6 @@ export default function HomePage() {
             <div className="neural-connection" style={{ top: '25%', left: '18%', width: '150px', transform: 'rotate(25deg)', animationDelay: '0s' }}></div>
             <div className="neural-connection" style={{ top: '45%', left: '28%', width: '120px', transform: 'rotate(-15deg)', animationDelay: '1s' }}></div>
             <div className="neural-connection" style={{ top: '35%', left: '40%', width: '200px', transform: 'rotate(10deg)', animationDelay: '2s' }}></div>
-          </div>
-          
-          {/* Geometric Shapes */}
-          <div className="geometric-shapes" aria-hidden="true">
-            <div className="shape shape-1"></div>
-            <div className="shape shape-2"></div>
-            <div className="shape shape-3"></div>
           </div>
           
           {/* Particle System */}
