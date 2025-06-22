@@ -1132,34 +1132,15 @@ html {
 
 /* Text Shadow for Better Readability */
 .hero-text-shadow {
-  text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.8), 
-    0 4px 8px rgba(0, 0, 0, 0.6),
-    0 8px 16px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Enhanced Backdrop for Content */
 .hero-content-backdrop {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
   border-radius: 1rem;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Section Text Visibility Enhancements */
-.section-text-shadow {
-  text-shadow: 
-    0 1px 2px rgba(0, 0, 0, 0.8),
-    0 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.section-content-backdrop {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(6px);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Hero Button Styles - Matching Typography */
