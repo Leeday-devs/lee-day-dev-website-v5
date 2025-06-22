@@ -479,16 +479,6 @@ export function PortfolioCarousel() {
                           View Full Project
                           <ExternalLink className="ml-2 w-4 h-4" />
                         </Button>
-                        {project.url && (
-                          <Button
-                            variant="outline"
-                            className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10 hover:border-blue-400"
-                            onClick={() => window.open(project.url, "_blank")}
-                          >
-                            Live Website
-                            <Globe className="ml-2 w-4 h-4" />
-                          </Button>
-                        )}
                       </div>
                     </div>
                   </div>
@@ -697,15 +687,6 @@ export function PortfolioCarousel() {
 
                 {/* Action Buttons */}
                 <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-700">
-                  {lightboxProject.url && (
-                    <Button
-                      className="enhanced-button text-white"
-                      onClick={() => window.open(lightboxProject.url, "_blank")}
-                    >
-                      View Live Website
-                      <ExternalLink className="ml-2 w-4 h-4" />
-                    </Button>
-                  )}
                   <Button
                     variant="outline"
                     className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10"
