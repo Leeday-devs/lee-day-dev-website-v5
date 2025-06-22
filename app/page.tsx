@@ -330,11 +330,12 @@ export default function HomePage() {
               <div className="text-center mb-16">
                 <h2 id="portfolio-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
                   <span className="gradient-text-animated">
-                    Comprehensive Portfolio Showcase
+                    Website Design & Development Portfolio
                   </span>
                 </h2>
                 <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
-                  Discover our end-to-end web development capabilities through diverse projects - from building websites from scratch to modernizing existing platforms with enhanced functionality and performance
+                  Explore my recent website design and development projects showcasing modern, responsive designs 
+                  and cutting-edge development techniques across various industries
                 </p>
               </div>
 
