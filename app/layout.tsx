@@ -90,7 +90,7 @@ export default function RootLayout({
               description:
                 "Professional web development and AI integration services specializing in custom websites, hosting solutions, and intelligent automation for UK businesses.",
               url: "https://leeday.dev",
-              telephone: "+44-7123-456789",
+              telephone: "07586266007",
               email: "leedaydevs@gmail.com",
               priceRange: "££-£££",
               currenciesAccepted: "GBP",
@@ -276,7 +276,7 @@ export default function RootLayout({
               contactPoint: [
                 {
                   "@type": "ContactPoint",
-                  telephone: "+44-7123-456789",
+                  telephone: "07586266007",
                   contactType: "customer service",
                   availableLanguage: ["English"],
                   areaServed: "GB",

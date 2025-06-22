@@ -621,10 +621,10 @@ export default function HomePage() {
                     <span className="text-blue-400 text-xs">📞</span>
                   </div>
                   <a
-                    href="tel:+447123456789"
+                    href="tel:07586266007"
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-responsive-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md p-1"
                   >
-                    +44-7123-456789
+                    07586266007
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
