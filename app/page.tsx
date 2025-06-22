@@ -39,14 +39,34 @@ export default function HomePage() {
           className="relative min-h-screen flex items-center justify-center overflow-hidden"
           aria-labelledby="hero-heading"
         >
-          {/* ... Rest of the component code ... */}
+          <div className="text-center">
+            <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold mb-6">
+              Welcome to Our Portfolio
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              Building amazing digital experiences
+            </p>
+            <Button onClick={() => scrollToSection('about')} className="bg-blue-600 hover:bg-blue-700">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </section>
 
-        {/* ... Other sections ... */}
+        {/* About Section */}
+        <section id="about" className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">About Us</h2>
+            <p className="text-lg text-gray-300">
+              We are passionate developers creating innovative solutions for the modern web.
+            </p>
+          </div>
+        </section>
 
         {/* Footer */}
         <footer className="bg-gray-900 border-t border-gray-800 py-12 no-print" role="contentinfo">
-          {/* ... Footer content ... */}
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <p className="text-gray-400">© 2024 Portfolio. All rights reserved.</p>
+          </div>
         </footer>
       </main>
     </div>
