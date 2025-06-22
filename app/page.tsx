@@ -181,14 +181,45 @@ export default function HomePage() {
         <IntersectionObserver>
           <section
             id="services"
-            className="py-20 bg-gray-800 scroll-mt-20"
+            className="py-20 bg-gray-800 scroll-mt-20 relative overflow-hidden"
             aria-labelledby="services-heading"
             tabIndex={-1}
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Animated Background */}
+            <div className="section-animated-bg" aria-hidden="true"></div>
+            
+            {/* Floating Micro Icons */}
+            <div className="section-floating-icons" aria-hidden="true">
+              <div className="micro-icon">
+                <Code className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Brain className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Zap className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Globe className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Settings className="w-4 h-4" />
+              </div>
+            </div>
+            
+            {/* Section Particles */}
+            <div className="section-particles" aria-hidden="true">
+              <div className="section-particle"></div>
+              <div className="section-particle"></div>
+              <div className="section-particle"></div>
+              <div className="section-particle"></div>
+              <div className="section-particle"></div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="text-center mb-16">
-                <h2 id="services-heading" className="text-responsive-4xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                <h2 id="services-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
+                  <span className="gradient-text-animated">
                     Professional Web Development Services
                   </span>
                 </h2>
@@ -199,9 +230,9 @@ export default function HomePage() {
 
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {/* Custom Web Development */}
-                <article className="group bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-500/10">
+                <article className="group animated-card glow-effect p-8 rounded-2xl transition-all duration-500">
                   <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                    <Code className="w-16 h-16 text-blue-400 group-hover:text-blue-300" aria-hidden="true" />
+                    <Code className="w-16 h-16 text-blue-400 group-hover:text-blue-300 pulse-accent" aria-hidden="true" />
                   </div>
                   <h3 className="text-responsive-2xl font-bold mb-4 group-hover:text-blue-300 transition-colors duration-300">
                     Custom Web Development
@@ -220,9 +251,9 @@ export default function HomePage() {
                 </article>
 
                 {/* Hosting & Maintenance */}
-                <article className="group bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-green-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-green-500/10">
+                <article className="group animated-card glow-effect p-8 rounded-2xl transition-all duration-500">
                   <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                    <Zap className="w-16 h-16 text-green-400 group-hover:text-green-300" aria-hidden="true" />
+                    <Zap className="w-16 h-16 text-green-400 group-hover:text-green-300 pulse-accent" aria-hidden="true" />
                   </div>
                   <h3 className="text-responsive-2xl font-bold mb-4 group-hover:text-green-300 transition-colors duration-300">
                     Hosting & Maintenance
@@ -241,9 +272,9 @@ export default function HomePage() {
                 </article>
 
                 {/* AI Assistant Integration */}
-                <article className="group bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-purple-500/10 md:col-span-2 lg:col-span-1">
+                <article className="group animated-card glow-effect p-8 rounded-2xl transition-all duration-500 md:col-span-2 lg:col-span-1">
                   <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                    <Brain className="w-16 h-16 text-purple-400 group-hover:text-purple-300" aria-hidden="true" />
+                    <Brain className="w-16 h-16 text-purple-400 group-hover:text-purple-300 pulse-accent" aria-hidden="true" />
                   </div>
                   <h3 className="text-responsive-2xl font-bold mb-4 group-hover:text-purple-300 transition-colors duration-300">
                     AI Assistant Integration
@@ -269,14 +300,36 @@ export default function HomePage() {
         <IntersectionObserver>
           <section
             id="portfolio"
-            className="py-20 bg-gray-900 scroll-mt-20"
+            className="py-20 bg-gray-900 scroll-mt-20 relative overflow-hidden"
             aria-labelledby="portfolio-heading"
             tabIndex={-1}
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Animated Background */}
+            <div className="section-animated-bg-alt" aria-hidden="true"></div>
+            
+            {/* Floating Micro Icons */}
+            <div className="section-floating-icons" aria-hidden="true">
+              <div className="micro-icon">
+                <Monitor className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Smartphone className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Database className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Cloud className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Rocket className="w-4 h-4" />
+              </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="text-center mb-16">
-                <h2 id="portfolio-heading" className="text-responsive-4xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                <h2 id="portfolio-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
+                  <span className="gradient-text-animated">
                     Featured Portfolio Projects
                   </span>
                 </h2>
@@ -294,16 +347,38 @@ export default function HomePage() {
         {/* AI Portal Feature Highlight Section */}
         <IntersectionObserver>
           <section
-            className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
+            className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
             aria-labelledby="ai-portal-heading"
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Animated Background */}
+            <div className="section-animated-bg" aria-hidden="true"></div>
+            
+            {/* Floating Micro Icons */}
+            <div className="section-floating-icons" aria-hidden="true">
+              <div className="micro-icon">
+                <Brain className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Bot className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Cpu className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Terminal className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Settings className="w-4 h-4" />
+              </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Content Section */}
                 <div className="animate-slide-in-left">
                   <div className="mb-8">
-                    <h2 id="ai-portal-heading" className="text-responsive-4xl font-bold mb-4">
-                      <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    <h2 id="ai-portal-heading" className="text-responsive-4xl font-bold mb-4 section-heading">
+                      <span className="gradient-text-animated">
                         LD Development AI Portal
                       </span>
                       <br />
@@ -348,7 +423,7 @@ export default function HomePage() {
 
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-responsive-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
+                    className="enhanced-button text-white px-8 py-4 text-responsive-lg font-semibold rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
                     aria-describedby="ai-portal-button-description"
                   >
                     Explore AI Portal
@@ -362,14 +437,11 @@ export default function HomePage() {
                 {/* Dashboard Mockup */}
                 <div className="relative animate-slide-in-right">
                   {/* Background Glow */}
-                  <div
-                    className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur-xl"
-                    aria-hidden="true"
-                  ></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur-xl pulse-accent" aria-hidden="true"></div>
 
                   {/* Main Dashboard Container */}
                   <div
-                    className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 shadow-2xl"
+                    className="relative animated-border rounded-2xl p-6 shadow-2xl"
                     role="img"
                     aria-label="AI Portal Dashboard interface showing active bots, conversations, and client statistics"
                   >
@@ -481,12 +553,34 @@ export default function HomePage() {
 
         {/* About Section */}
         <IntersectionObserver>
-          <section id="about" className="py-20 bg-gray-900 scroll-mt-20" aria-labelledby="about-heading" tabIndex={-1}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section id="about" className="py-20 bg-gray-900 scroll-mt-20 relative overflow-hidden" aria-labelledby="about-heading" tabIndex={-1}>
+            {/* Animated Background */}
+            <div className="section-animated-bg-alt" aria-hidden="true"></div>
+            
+            {/* Floating Micro Icons */}
+            <div className="section-floating-icons" aria-hidden="true">
+              <div className="micro-icon">
+                <Code className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Globe className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Layers className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Wifi className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <CheckCircle className="w-4 h-4" />
+              </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Photo Section */}
                 <div className="relative animate-slide-in-left">
-                  <div className="relative mx-auto lg:mx-0 w-80 h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-gray-700">
+                  <div className="relative mx-auto lg:mx-0 w-80 h-80 rounded-2xl overflow-hidden animated-border glow-effect">
                     <OptimizedImage
                       src="/placeholder.svg?height=320&width=320"
                       alt="Lee Day - Professional Web Developer and AI Integration Specialist based in London and Windsor"
@@ -512,8 +606,8 @@ export default function HomePage() {
                 {/* Biography Section */}
                 <div className="animate-slide-in-right">
                   <div className="mb-6">
-                    <h2 id="about-heading" className="text-responsive-4xl font-bold mb-2">
-                      <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    <h2 id="about-heading" className="text-responsive-4xl font-bold mb-2 section-heading">
+                      <span className="gradient-text-animated">
                         Lee Day
                       </span>
                     </h2>
@@ -552,19 +646,19 @@ export default function HomePage() {
                   </div>
 
                   {/* Trust Indicators */}
-                  <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-xl p-6 border border-gray-700">
+                  <div className="animated-card rounded-xl p-6">
                     <h3 className="text-responsive-xl font-bold mb-4 text-white">Why Clients Trust Me</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                       <div className="text-center">
-                        <div className="text-responsive-2xl font-bold text-blue-400 mb-1">50+</div>
+                        <div className="text-responsive-2xl font-bold text-blue-400 mb-1 pulse-accent">50+</div>
                         <div className="text-responsive-sm text-gray-400">Successful Projects</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-responsive-2xl font-bold text-purple-400 mb-1">5+</div>
+                        <div className="text-responsive-2xl font-bold text-purple-400 mb-1 pulse-accent">5+</div>
                         <div className="text-responsive-sm text-gray-400">Years Experience</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-responsive-2xl font-bold text-green-400 mb-1">100%</div>
+                        <div className="text-responsive-2xl font-bold text-green-400 mb-1 pulse-accent">100%</div>
                         <div className="text-responsive-sm text-gray-400">Client Satisfaction</div>
                       </div>
                     </div>
@@ -579,14 +673,36 @@ export default function HomePage() {
         <IntersectionObserver>
           <section
             id="contact"
-            className="py-20 bg-gray-800 scroll-mt-20"
+            className="py-20 bg-gray-800 scroll-mt-20 relative overflow-hidden"
             aria-labelledby="contact-heading"
             tabIndex={-1}
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Animated Background */}
+            <div className="section-animated-bg" aria-hidden="true"></div>
+            
+            {/* Floating Micro Icons */}
+            <div className="section-floating-icons" aria-hidden="true">
+              <div className="micro-icon">
+                <Mail className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Phone className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <MapPin className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <Clock className="w-4 h-4" />
+              </div>
+              <div className="micro-icon">
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="text-center mb-16">
-                <h2 id="contact-heading" className="text-responsive-4xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                <h2 id="contact-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
+                  <span className="gradient-text-animated">
                     Contact Lee Day for Your Project
                   </span>
                 </h2>
@@ -608,7 +724,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <div className="text-responsive-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">
+              <div className="text-responsive-2xl font-bold gradient-text-animated mb-4">
                 Lee Day
               </div>
               <p className="text-gray-400 text-responsive-sm leading-relaxed mb-4">
