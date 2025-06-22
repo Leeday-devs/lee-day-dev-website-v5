@@ -827,7 +827,10 @@ export default function HomePage() {
                   <div className="w-5 h-5 bg-purple-500/20 rounded flex items-center justify-center" aria-hidden="true">
                     <span className="text-purple-400 text-xs">📍</span>
                   </div>
-                  <span className="text-gray-400 text-responsive-sm">London & Windsor, UK</span>
+                  <div className="text-gray-400 text-responsive-sm">
+                    <div>3rd Floor 86-90, Paul Street</div>
+                    <div>London EC2A 4NE, UK</div>
+                  </div>
                 </div>
               </address>
 

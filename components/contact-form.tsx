@@ -286,7 +286,7 @@ Submitted: ${new Date().toLocaleString()}
           </div>
 
           <p className="text-gray-300 text-sm">
-            Serving clients across London, Windsor, and surrounding areas. Remote collaboration available worldwide.
+            Serving clients across London and surrounding areas. Remote collaboration available worldwide.
           </p>
         </div>
 
