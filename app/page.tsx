@@ -197,6 +197,19 @@ export default function HomePage() {
                 <Globe className="w-4 h-4" />
               </div>
             </div>
+
+            <div className="container relative z-10">
+              <div className="text-center mb-16">
+                <h2 id="services-heading" className="section-heading">
+                  <span className="text-gradient-animated">
+                    Our Services
+                  </span>
+                </h2>
+                <p className="section-subtitle">
+                  Comprehensive web development and AI integration solutions tailored to your business needs.
+                </p>
+              </div>
+            </div>
           </section>
         </IntersectionObserver>
 
