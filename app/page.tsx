@@ -142,7 +142,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-responsive-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  className="hero-primary-button bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-12 py-6 text-responsive-2xl font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 hero-text-shadow"
                   onClick={() => scrollToSection("portfolio")}
                   aria-describedby="portfolio-button-description"
                 >
@@ -156,7 +156,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-responsive-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+                  className="hero-secondary-button border-2 border-white/80 text-white hover:bg-white hover:text-gray-900 px-12 py-6 text-responsive-2xl font-bold rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/10 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 hero-text-shadow"
                   onClick={() => scrollToSection("contact")}
                   aria-describedby="quote-button-description"
                 >
