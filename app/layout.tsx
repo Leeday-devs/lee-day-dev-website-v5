@@ -100,10 +100,11 @@ export default function RootLayout({
 
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "3rd Floor 86-90, Paul Street",
                 addressLocality: "London",
                 addressRegion: "England",
                 addressCountry: "GB",
-                postalCode: "SW1A 1AA",
+                postalCode: "EC2A 4NE",
               },
 
               areaServed: [
@@ -125,8 +126,8 @@ export default function RootLayout({
 
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: "51.5074",
-                longitude: "-0.1278",
+                latitude: "51.5225",
+                longitude: "-0.0864",
               },
 
               founder: {
