@@ -52,6 +52,9 @@ export function ContactForm() {
     setSubmitStatus("idle")
 
     try {
+      // Create WhatsApp message with form details
+      const whatsappMessage = createWhatsAppMessage(formData)
+      
       // Simulate form submission - in a real app, this would send to your backend
       const emailData = {
         to: "leedaydevs@gmail.com",
@@ -74,6 +77,9 @@ Submitted: ${new Date().toLocaleString()}
       // Simulate API delay
       await new Promise((resolve) => setTimeout(resolve, 2000))
 
+      // Open WhatsApp with pre-filled message
+      window.open(whatsappMessage, '_blank')
+      
       setSubmitStatus("success")
       setFormData({
         name: "",
@@ -91,6 +97,32 @@ Submitted: ${new Date().toLocaleString()}
     }
   }
 
+  // Function to create WhatsApp message URL with form data
+  const createWhatsAppMessage = (data: FormData) => {
+    const serviceLabel = serviceOptions.find((s) => s.value === data.service)?.label || "Not specified"
+    
+    const message = `Hi Lee! 👋
+
+I just submitted a quote request through your website and wanted to connect directly via WhatsApp.
+
+📋 *Project Details:*
+• Name: ${data.name}
+• Email: ${data.email}
+• Company: ${data.company || "Not provided"}
+• Service Interest: ${serviceLabel}
+
+💬 *Project Description:*
+${data.message}
+
+I'm looking forward to discussing this project with you!
+
+Best regards,
+${data.name}`
+
+    const encodedMessage = encodeURIComponent(message)
+    return `https://wa.me/447586266007?text=${encodedMessage}`
+  }
+
   const isFormValid = formData.name && formData.email && formData.message && formData.gdprConsent
 
   return (
@@ -102,7 +134,10 @@ Submitted: ${new Date().toLocaleString()}
         {submitStatus === "success" && (
           <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
             <p className="text-green-400 font-medium">Thank you for your message!</p>
-            <p className="text-green-300 text-sm mt-1">I'll get back to you within 24 hours to discuss your project.</p>
+            <p className="text-green-300 text-sm mt-1">
+              Your request has been sent and WhatsApp should have opened with your details. 
+              I'll also respond via email within 24 hours.
+            </p>
           </div>
         )}
 
@@ -448,10 +483,10 @@ Submitted: ${new Date().toLocaleString()}
             {/* WhatsApp Quick Contact */}
             <div className="mt-6">
               <a
-                href="https://wa.me/447586266007?text=Hi%20Lee,%20I'm%20interested%20in%20discussing%20a%20web%20development%20project.%20Could%20we%20chat?"
+                href="https://wa.me/447586266007?text=Hi%20Lee!%20👋%0A%0AI'm%20interested%20in%20discussing%20a%20web%20development%20project.%20Could%20we%20chat%3F%0A%0AServices%20I'm%20interested%20in:%0A•%20Custom%20Web%20Development%0A•%20AI%20Integration%0A•%20Hosting%20%26%20Maintenance%0A%0ALooking%20forward%20to%20hearing%20from%20you!"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center space-x-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
+                className="group flex items-center space-x-3 whatsapp-button text-white px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
                 aria-label="Contact via WhatsApp for instant messaging"
               >
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
