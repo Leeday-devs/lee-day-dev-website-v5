@@ -128,7 +128,7 @@ ${data.name}`
   return (
     <div className="grid lg:grid-cols-2 gap-12 items-start">
       {/* Contact Form */}
-      <div className="card-primary">
+      <div className="animated-card glow-effect p-8 rounded-2xl">
         <h3 className="text-2xl font-bold text-white mb-6">Get Your Free Quote</h3>
 
         {submitStatus === "success" && (
@@ -162,12 +162,12 @@ ${data.name}`
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="form-input"
+                className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                 placeholder="Your full name"
               />
             </div>
             <div>
-              <label htmlFor="email" className="form-label">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                 Email Address *
               </label>
               <input
@@ -177,7 +177,7 @@ ${data.name}`
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="form-input"
+                className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                 placeholder="your.email@company.com"
               />
             </div>
@@ -185,7 +185,7 @@ ${data.name}`
 
           {/* Company */}
           <div>
-            <label htmlFor="company" className="form-label">
+            <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
               Company Name
             </label>
             <input
@@ -194,14 +194,14 @@ ${data.name}`
               name="company"
               value={formData.company}
               onChange={handleInputChange}
-              className="form-input"
+              className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
               placeholder="Your company name (optional)"
             />
           </div>
 
           {/* Service Interest */}
           <div>
-            <label htmlFor="service" className="form-label">
+            <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
               Service Interest
             </label>
             <select
@@ -209,7 +209,7 @@ ${data.name}`
               name="service"
               value={formData.service}
               onChange={handleInputChange}
-              className="form-input"
+              className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
             >
               {serviceOptions.map((option) => (
                 <option key={option.value} value={option.value} className="bg-gray-900">
@@ -221,7 +221,7 @@ ${data.name}`
 
           {/* Message */}
           <div>
-            <label htmlFor="message" className="form-label">
+            <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
               Project Details *
             </label>
             <textarea
@@ -231,7 +231,7 @@ ${data.name}`
               onChange={handleInputChange}
               required
               rows={5}
-              className="form-input resize-vertical"
+              className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-vertical"
               placeholder="Tell me about your project, timeline, budget, and any specific requirements..."
             />
           </div>
@@ -270,7 +270,7 @@ ${data.name}`
           <Button
             type="submit"
             disabled={!isFormValid || isSubmitting}
-            className="w-full btn-primary text-lg px-8 py-4 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
+            className="w-full enhanced-button disabled:from-gray-600 disabled:to-gray-700 text-white px-8 py-4 text-lg font-semibold rounded-full disabled:transform-none disabled:shadow-none"
           >
             {isSubmitting ? (
               <>
@@ -290,7 +290,7 @@ ${data.name}`
       {/* Map and Contact Info */}
       <div className="space-y-8">
         {/* Map Placeholder */}
-        <div className="card-secondary">
+        <div className="animated-card p-6 rounded-2xl">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center">
             <MapPin className="w-5 h-5 text-blue-400 mr-2 pulse-accent" />
             Service Areas
@@ -411,7 +411,7 @@ ${data.name}`
         </div>
 
         {/* Contact Information */}
-        <div className="card-secondary">
+        <div className="animated-card p-6 rounded-2xl">
           <h3 className="text-xl font-bold text-white mb-6">Get In Touch</h3>
 
           <div className="space-y-4">
@@ -486,7 +486,7 @@ ${data.name}`
                 href="https://wa.me/447586266007?text=Hi%20Lee!%20👋%0A%0AI'm%20interested%20in%20discussing%20a%20web%20development%20project.%20Could%20we%20chat%3F%0A%0AServices%20I'm%20interested%20in:%0A•%20Custom%20Web%20Development%0A•%20AI%20Integration%0A•%20Hosting%20%26%20Maintenance%0A%0ALooking%20forward%20to%20hearing%20from%20you!"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center space-x-3 btn-accent px-4 py-3 rounded-xl hover-lift focus-visible"
+                className="group flex items-center space-x-3 whatsapp-button text-white px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
                 aria-label="Contact via WhatsApp for instant messaging"
               >
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">

@@ -93,19 +93,19 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
 
   return (
     <nav
-      className={`nav-primary fixed top-0 w-full z-50 ${
-        scrollY > 50 ? "bg-gray-900/95" : "bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrollY > 50 ? "bg-gray-900/95 backdrop-blur-sm border-b border-gray-800" : "bg-transparent"
       }`}
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="container">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="nav-logo">
+          <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             <a
               href="#main-content"
-              className="focus-visible"
+              className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md"
               aria-label="LD Web Development - Go to main content"
             >
               LD Web Development
@@ -118,7 +118,7 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
               <button
                 key={item.id}
                 onClick={() => handleNavigation(item.id)}
-                className="nav-link"
+                className="hover:text-blue-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md px-2 py-1"
                 role="menuitem"
                 aria-describedby={`${item.id}-description`}
               >
@@ -133,7 +133,7 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
           {/* Mobile Menu Button */}
           <button
             ref={buttonRef}
-            className="md:hidden p-2 rounded-md focus-visible"
+            className="md:hidden p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             onClick={toggleMenu}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
@@ -158,7 +158,7 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
                 <button
                   key={item.id}
                   onClick={() => handleNavigation(item.id)}
-                  className={`nav-link text-left px-2 py-2 ${
+                  className={`text-left hover:text-blue-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md px-2 py-2 ${
                     focusedIndex === index ? "bg-gray-800 text-blue-400" : ""
                   }`}
                   role="menuitem"
