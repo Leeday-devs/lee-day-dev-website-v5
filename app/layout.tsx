@@ -100,7 +100,7 @@ export default function RootLayout({
 
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "3rd Floor 86-90, Paul Street",
+                streetAddress: "3rd Floor 86-90 Paul Street",
                 addressLocality: "London",
                 addressRegion: "England",
                 addressCountry: "GB",
@@ -121,6 +121,11 @@ export default function RootLayout({
                 {
                   "@type": "Country",
                   name: "United Kingdom",
+                },
+                {
+                  "@type": "Place",
+                  name: "Worldwide",
+                  description: "Remote services available globally",
                 },
               ],
 
