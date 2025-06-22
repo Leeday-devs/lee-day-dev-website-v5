@@ -779,8 +779,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <div className="text-responsive-2xl font-bold gradient-text-animated mb-4">
-                Lee Day
+              <div className="text-responsive-xl font-bold gradient-text-animated mb-4">
+                LD Web Development
               </div>
               <p className="text-gray-400 text-responsive-sm leading-relaxed mb-4">
                 Professional web development and AI integration services. Creating modern, responsive websites that
