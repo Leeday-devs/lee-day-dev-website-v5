@@ -262,31 +262,116 @@ Submitted: ${new Date().toLocaleString()}
           </h3>
 
           {/* Map Container */}
-          <div className="relative h-64 bg-gray-900/50 rounded-lg border border-gray-600 overflow-hidden mb-4">
-            <img
-              src="/placeholder.svg?height=256&width=400&text=London+%26+Windsor+Service+Areas"
-              alt="Service area map showing London and Windsor locations where Lee Day provides web development and AI integration services"
-              className="w-full h-full object-cover opacity-60"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+          <div className="relative h-80 bg-gray-900/50 rounded-lg border border-gray-600 overflow-hidden mb-4">
+            {/* Interactive Map Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-gray-900/40 to-purple-900/20"></div>
+            
+            {/* Map Grid */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="w-full h-full" style={{
+                backgroundImage: `
+                  linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
+                `,
+                backgroundSize: '20px 20px'
+              }}></div>
+            </div>
 
-            {/* Location Markers */}
-            <div className="absolute top-1/3 left-1/3 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse shadow-lg"></div>
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-white font-medium bg-gray-900/80 px-2 py-1 rounded whitespace-nowrap">
-                London
+            {/* UK Outline Representation */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative w-48 h-64">
+                {/* Simplified UK Shape */}
+                <div className="absolute inset-0 border-2 border-blue-400/30 rounded-tl-3xl rounded-tr-lg rounded-bl-2xl rounded-br-xl transform rotate-12 opacity-40"></div>
+                
+                {/* London Marker */}
+                <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div className="relative group cursor-pointer">
+                    <div className="w-6 h-6 bg-blue-500 rounded-full animate-pulse shadow-lg border-2 border-white/50 group-hover:scale-125 transition-transform duration-300"></div>
+                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-gray-900/90 text-white text-xs px-2 py-1 rounded whitespace-nowrap font-medium">
+                        London
+                      </div>
+                    </div>
+                    {/* Ripple Effect */}
+                    <div className="absolute inset-0 w-6 h-6 bg-blue-500/30 rounded-full animate-ping"></div>
+                  </div>
+                </div>
+                
+                {/* Windsor Marker */}
+                <div className="absolute top-3/4 left-2/5 transform -translate-x-1/2 -translate-y-1/2">
+                  <div className="relative group cursor-pointer">
+                    <div className="w-5 h-5 bg-purple-500 rounded-full animate-pulse shadow-lg border-2 border-white/50 group-hover:scale-125 transition-transform duration-300" style={{ animationDelay: '0.5s' }}></div>
+                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-gray-900/90 text-white text-xs px-2 py-1 rounded whitespace-nowrap font-medium">
+                        Windsor
+                      </div>
+                    </div>
+                    {/* Ripple Effect */}
+                    <div className="absolute inset-0 w-5 h-5 bg-purple-500/30 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                  </div>
+                </div>
+                
+                {/* Service Area Coverage */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div className="w-32 h-32 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full animate-pulse border border-blue-400/20"></div>
+                </div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div className="w-24 h-24 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full animate-pulse border border-blue-400/30" style={{ animationDelay: '1s' }}></div>
+                </div>
               </div>
             </div>
-            <div className="absolute top-2/3 right-1/3 transform translate-x-1/2 -translate-y-1/2">
-              <div className="w-4 h-4 bg-purple-500 rounded-full animate-pulse shadow-lg"></div>
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-white font-medium bg-gray-900/80 px-2 py-1 rounded whitespace-nowrap">
-                Windsor
+
+            {/* Global Service Indicator */}
+            <div className="absolute top-4 right-4">
+              <div className="bg-gray-900/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-600/50">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-green-400 text-xs font-medium">Worldwide Service</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Connection Lines */}
+            <div className="absolute inset-0 pointer-events-none">
+              <svg className="w-full h-full opacity-30">
+                <defs>
+                  <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.6"/>
+                    <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.6"/>
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M 120 200 Q 140 180 160 200"
+                  stroke="url(#connectionGradient)"
+                  strokeWidth="2"
+                  fill="none"
+                  className="animate-pulse"
+                />
+              </svg>
+            </div>
+
+            {/* Interactive Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-gray-900/20"></div>
+            
+            {/* Legend */}
+            <div className="absolute bottom-4 left-4">
+              <div className="bg-gray-900/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-600/50">
+                <div className="space-y-1">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <span className="text-white text-xs">Primary Service Area</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                    <span className="text-white text-xs">Extended Coverage</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <p className="text-gray-300 text-sm">
-            Serving clients across London and surrounding areas. Remote collaboration available worldwide.
+            Primary service areas in London and Windsor with remote collaboration available worldwide for all projects.
           </p>
         </div>
 
