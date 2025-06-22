@@ -213,7 +213,7 @@ Submitted: ${new Date().toLocaleString()}
               className="mt-1 w-4 h-4 text-blue-600 bg-gray-900 border-gray-600 rounded focus:ring-blue-500 focus:ring-2"
             />
             <label htmlFor="gdprConsent" className="text-sm text-gray-300 leading-relaxed">
-              I consent to Lee Day storing and processing my personal data for the purpose of responding to my inquiry.
+              I consent to LD Web Development storing and processing my personal data for the purpose of responding to my inquiry.
               You can withdraw your consent at any time. *
             </label>
           </div>
@@ -334,7 +334,7 @@ Submitted: ${new Date().toLocaleString()}
               </div>
               <div>
                 <p className="text-white font-medium">Location</p>
-                <p className="text-gray-400">London & Windsor, UK</p>
+                <p className="text-gray-400">London, UK • Worldwide Service</p>
               </div>
             </div>
 
@@ -357,7 +357,7 @@ Submitted: ${new Date().toLocaleString()}
           <div className="mt-6 p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
             <p className="text-blue-300 font-medium text-sm">⚡ Quick Response</p>
             <p className="text-blue-200 text-sm">
-              I typically respond to all inquiries within 24 hours during business days. Available for in-person meetings in London or remote consultations worldwide.
+              I typically respond to all inquiries within 24 hours during business days.
             </p>
           </div>
         </div>

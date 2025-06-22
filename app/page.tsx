@@ -663,10 +663,10 @@ export default function HomePage() {
                   <div className="mb-6">
                     <h2 id="about-heading" className="text-responsive-4xl font-bold mb-2 section-heading">
                       <span className="gradient-text-animated">
-                        Lee Day
+                        LD Web Development
                       </span>
                     </h2>
-                    <p className="text-responsive-xl text-blue-400 font-semibold mb-2">CEO & Lead Developer</p>
+                    <p className="text-responsive-xl text-blue-400 font-semibold mb-2">Founded by Lee Day - CEO & Lead Developer</p>
                     <p className="text-gray-400 flex items-center">
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-2" aria-hidden="true"></span>
                       London & Windsor
@@ -758,7 +758,7 @@ export default function HomePage() {
               <div className="text-center mb-16">
                 <h2 id="contact-heading" className="text-responsive-4xl font-bold mb-6 section-heading">
                   <span className="gradient-text-animated">
-                    Contact Lee Day for Your Project
+                    Contact LD Web Development
                   </span>
                 </h2>
                 <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
@@ -780,7 +780,7 @@ export default function HomePage() {
             {/* Logo and Description */}
             <div className="md:col-span-1">
               <div className="text-responsive-2xl font-bold gradient-text-animated mb-4">
-                Lee Day
+                LD Web Development
               </div>
               <p className="text-gray-400 text-responsive-sm leading-relaxed mb-4">
                 Professional web development and AI integration services. Creating modern, responsive websites that
@@ -903,7 +903,7 @@ export default function HomePage() {
           {/* Bottom Bar */}
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-responsive-sm mb-4 md:mb-0">
-              © 2024 Lee Day - Web & AI Solutions. All rights reserved.
+              © 2024 LD Web Development. All rights reserved.
             </div>
             <nav className="flex space-x-6 text-responsive-sm" aria-label="Legal links">
               <a
