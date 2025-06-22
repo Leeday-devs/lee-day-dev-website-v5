@@ -762,8 +762,8 @@ export default function HomePage() {
                   </span>
                 </h2>
                 <p className="text-responsive-xl text-gray-300 max-w-3xl mx-auto">
-                  Ready to transform your business with modern web solutions? Get in touch for a free consultation and
-                  personalized quote.
+                  Ready to transform your business with modern web solutions? Get in touch for a free consultation and 
+                  personalized quote. Available for in-person meetings in London or remote consultations worldwide.
                 </p>
               </div>
 

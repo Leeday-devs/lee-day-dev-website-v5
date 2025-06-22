@@ -357,7 +357,7 @@ Submitted: ${new Date().toLocaleString()}
           <div className="mt-6 p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
             <p className="text-blue-300 font-medium text-sm">⚡ Quick Response</p>
             <p className="text-blue-200 text-sm">
-              I typically respond to all inquiries within 24 hours during business days.
+              I typically respond to all inquiries within 24 hours during business days. Available for in-person meetings in London or remote consultations worldwide.
             </p>
           </div>
         </div>
