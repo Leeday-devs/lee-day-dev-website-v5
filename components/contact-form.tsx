@@ -29,12 +29,13 @@ export function ContactForm() {
 
   const serviceOptions = [
     { value: "", label: "Select a service..." },
-    { value: "web-development", label: "Custom Web Development" },
-    { value: "hosting-creation", label: "Hosting & Website Creation" },
-    { value: "ai-integration", label: "AI Assistant Integration" },
-    { value: "ecommerce", label: "E-commerce Solutions" },
-    { value: "ai-portal", label: "LD Development AI Portal" },
-    { value: "consultation", label: "General Consultation" },
+    { value: "small-business-website", label: "Small Business Website" },
+    { value: "local-seo-website", label: "Local SEO Website" },
+    { value: "ecommerce-small-business", label: "Small Business E-commerce" },
+    { value: "ai-customer-support", label: "AI Customer Support Bot" },
+    { value: "appointment-booking", label: "AI Appointment Booking" },
+    { value: "website-maintenance", label: "Website Hosting & Maintenance" },
+    { value: "consultation", label: "Free Small Business Consultation" },
     { value: "other", label: "Other" },
   ]
 
@@ -52,12 +53,9 @@ export function ContactForm() {
     setSubmitStatus("idle")
 
     try {
-      // Create WhatsApp message with form details
-      const whatsappMessage = createWhatsAppMessage(formData)
-      
       // Simulate form submission - in a real app, this would send to your backend
       const emailData = {
-        to: "leedaydevs@gmail.com",
+        to: "LeeDayDevs@gmail.com",
         subject: `New Quote Request from ${formData.name}`,
         body: `
 Name: ${formData.name}
@@ -77,9 +75,6 @@ Submitted: ${new Date().toLocaleString()}
       // Simulate API delay
       await new Promise((resolve) => setTimeout(resolve, 2000))
 
-      // Open WhatsApp with pre-filled message
-      window.open(whatsappMessage, '_blank')
-      
       setSubmitStatus("success")
       setFormData({
         name: "",
@@ -97,46 +92,19 @@ Submitted: ${new Date().toLocaleString()}
     }
   }
 
-  // Function to create WhatsApp message URL with form data
-  const createWhatsAppMessage = (data: FormData) => {
-    const serviceLabel = serviceOptions.find((s) => s.value === data.service)?.label || "Not specified"
-    
-    const message = `Hi Lee! 👋
-
-I just submitted a quote request through your website and wanted to connect directly via WhatsApp.
-
-📋 *Project Details:*
-• Name: ${data.name}
-• Email: ${data.email}
-• Company: ${data.company || "Not provided"}
-• Service Interest: ${serviceLabel}
-
-💬 *Project Description:*
-${data.message}
-
-I'm looking forward to discussing this project with you!
-
-Best regards,
-${data.name}`
-
-    const encodedMessage = encodeURIComponent(message)
-    return `https://wa.me/447586266007?text=${encodedMessage}`
-  }
-
   const isFormValid = formData.name && formData.email && formData.message && formData.gdprConsent
 
   return (
-    <div className="grid lg:grid-cols-2 gap-12 items-start">
+    <div className="grid lg:grid-cols-2 gap-12 items-end">
       {/* Contact Form */}
-      <div className="animated-card glow-effect p-8 rounded-2xl">
-        <h3 className="text-2xl font-bold text-white mb-6">Get Your Free Quote</h3>
+      <div className="bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+        <h3 className="text-2xl font-bold text-white mb-6">Get Your Free Small Business Quote</h3>
 
         {submitStatus === "success" && (
           <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
-            <p className="text-green-400 font-medium">Thank you for your message!</p>
+            <p className="text-green-400 font-medium">Thank you for your inquiry!</p>
             <p className="text-green-300 text-sm mt-1">
-              Your request has been sent and WhatsApp should have opened with your details. 
-              I'll also respond via email within 24 hours.
+              I'll get back to you within 24 hours to discuss how we can help grow your small business online.
             </p>
           </div>
         )}
@@ -232,7 +200,7 @@ ${data.name}`
               required
               rows={5}
               className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-vertical"
-              placeholder="Tell me about your project, timeline, budget, and any specific requirements..."
+              placeholder="Tell me about your small business, your goals, timeline, budget, and how you'd like to attract more customers online..."
             />
           </div>
 
@@ -248,7 +216,7 @@ ${data.name}`
               className="mt-1 w-4 h-4 text-blue-600 bg-gray-900 border-gray-600 rounded focus:ring-blue-500 focus:ring-2"
             />
             <label htmlFor="gdprConsent" className="text-sm text-gray-300 leading-relaxed">
-              I consent to LD Web Development storing and processing my personal data for the purpose of responding to my inquiry.
+              I consent to Lee Day storing and processing my personal data for the purpose of responding to my inquiry.
               You can withdraw your consent at any time. *
             </label>
           </div>
@@ -256,13 +224,9 @@ ${data.name}`
           {/* Privacy Note */}
           <div className="bg-gray-900/30 p-4 rounded-lg border border-gray-700/50">
             <p className="text-xs text-gray-400 leading-relaxed">
-              <strong className="text-gray-300">Privacy Notice:</strong> Your personal information will only be used to
-              respond to your inquiry and provide relevant service information. We never share your data with third
-              parties. For more details, see our{" "}
-              <a href="/privacy-policy" className="text-blue-400 hover:text-blue-300 underline">
-                Privacy Policy
-              </a>
-              .
+              <strong className="text-gray-300">Privacy Notice:</strong> Your business information will only be used to
+              respond to your inquiry and provide relevant service recommendations for small businesses. We never share
+              your data with third parties and understand the importance of confidentiality for growing businesses.
             </p>
           </div>
 
@@ -270,7 +234,7 @@ ${data.name}`
           <Button
             type="submit"
             disabled={!isFormValid || isSubmitting}
-            className="w-full enhanced-button disabled:from-gray-600 disabled:to-gray-700 text-white px-8 py-4 text-lg font-semibold rounded-full disabled:transform-none disabled:shadow-none"
+            className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:transform-none disabled:shadow-none"
           >
             {isSubmitting ? (
               <>
@@ -290,128 +254,46 @@ ${data.name}`
       {/* Map and Contact Info */}
       <div className="space-y-8">
         {/* Map Placeholder */}
-        <div className="animated-card p-6 rounded-2xl">
+        <div className="bg-gray-800/50 p-6 rounded-2xl border border-gray-700">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-            <MapPin className="w-5 h-5 text-blue-400 mr-2 pulse-accent" />
-            Service Areas
+            <MapPin className="w-5 h-5 text-blue-400 mr-2" />
+            Office Location
           </h3>
 
           {/* Map Container */}
-          <div className="relative h-80 bg-gray-900/50 rounded-lg border border-gray-600 overflow-hidden mb-4">
-            {/* Interactive Map Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-gray-900/40 to-purple-900/20"></div>
-            
-            {/* Map Grid */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="w-full h-full" style={{
-                backgroundImage: `
-                  linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
-                `,
-                backgroundSize: '20px 20px'
-              }}></div>
-            </div>
-
-            {/* UK Outline Representation */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-48 h-64">
-                {/* Simplified UK Shape */}
-                <div className="absolute inset-0 border-2 border-blue-400/30 rounded-tl-3xl rounded-tr-lg rounded-bl-2xl rounded-br-xl transform rotate-12 opacity-40"></div>
-                
-                {/* London Marker */}
-                <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="relative group cursor-pointer">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full animate-pulse shadow-lg border-2 border-white/50 group-hover:scale-125 transition-transform duration-300"></div>
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-gray-900/90 text-white text-xs px-2 py-1 rounded whitespace-nowrap font-medium">
-                        London
-                      </div>
-                    </div>
-                    {/* Ripple Effect */}
-                    <div className="absolute inset-0 w-6 h-6 bg-blue-500/30 rounded-full animate-ping"></div>
-                  </div>
-                </div>
-                
-                {/* Windsor Marker */}
-                <div className="absolute top-3/4 left-2/5 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="relative group cursor-pointer">
-                    <div className="w-5 h-5 bg-purple-500 rounded-full animate-pulse shadow-lg border-2 border-white/50 group-hover:scale-125 transition-transform duration-300" style={{ animationDelay: '0.5s' }}></div>
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-gray-900/90 text-white text-xs px-2 py-1 rounded whitespace-nowrap font-medium">
-                        Windsor
-                      </div>
-                    </div>
-                    {/* Ripple Effect */}
-                    <div className="absolute inset-0 w-5 h-5 bg-purple-500/30 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
-                  </div>
-                </div>
-                
-                {/* Service Area Coverage */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-32 h-32 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full animate-pulse border border-blue-400/20"></div>
-                </div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-24 h-24 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full animate-pulse border border-blue-400/30" style={{ animationDelay: '1s' }}></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Global Service Indicator */}
-            <div className="absolute top-4 right-4">
-              <div className="bg-gray-900/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-600/50">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 text-xs font-medium">Worldwide Service</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Connection Lines */}
-            <div className="absolute inset-0 pointer-events-none">
-              <svg className="w-full h-full opacity-30">
-                <defs>
-                  <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.6"/>
-                    <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.6"/>
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M 120 200 Q 140 180 160 200"
-                  stroke="url(#connectionGradient)"
-                  strokeWidth="2"
-                  fill="none"
-                  className="animate-pulse"
-                />
-              </svg>
-            </div>
-
-            {/* Interactive Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-gray-900/20"></div>
-            
-            {/* Legend */}
-            <div className="absolute bottom-4 left-4">
-              <div className="bg-gray-900/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-600/50">
-                <div className="space-y-1">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                    <span className="text-white text-xs">Primary Service Area</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                    <span className="text-white text-xs">Extended Coverage</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative h-64 bg-gray-900/50 rounded-lg border border-gray-600 overflow-hidden mb-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4982474158!2d-0.08854492336!3d51.52540097181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca9b3d0c5e7%3A0x4a7b8c9d0e1f2a3b!2s86-90%20Paul%20St%2C%20London%20EC2A%204NE%2C%20UK!5e0!3m2!1sen!2suk!4v1703123456789!5m2!1sen!2suk"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="LD Web Development Office Location - Paul Street, London"
+              className="w-full h-full"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent pointer-events-none"></div>
           </div>
 
-          <p className="text-gray-300 text-sm">
-            Primary service areas in London and Windsor with remote collaboration available worldwide for all projects.
+          <div className="bg-gray-900/30 p-4 rounded-lg border border-gray-700/50">
+            <p className="text-white font-medium mb-2">Office Address:</p>
+            <address className="text-gray-300 text-sm not-italic leading-relaxed">
+              3rd Floor 86-90, Paul Street
+              <br />
+              London EC2A 4NE
+              <br />
+              United Kingdom
+            </address>
+          </div>
+
+          <p className="text-gray-300 text-sm mt-4">
+            Located in the heart of London's tech district. Remote collaboration available worldwide.
           </p>
         </div>
 
         {/* Contact Information */}
-        <div className="animated-card p-6 rounded-2xl">
+        <div className="bg-gray-800/50 p-6 rounded-2xl border border-gray-700">
           <h3 className="text-xl font-bold text-white mb-6">Get In Touch</h3>
 
           <div className="space-y-4">
@@ -423,10 +305,10 @@ ${data.name}`
               <div>
                 <p className="text-white font-medium">Phone</p>
                 <a
-                  href="tel:07586266007"
+                  href="tel:+447586266007"
                   className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                 >
-                  07586266007
+                  +44-7586-266007
                 </a>
               </div>
             </div>
@@ -439,10 +321,10 @@ ${data.name}`
               <div>
                 <p className="text-white font-medium">Email</p>
                 <a
-                  href="mailto:leedaydevs@gmail.com"
+                  href="mailto:LeeDayDevs@gmail.com"
                   className="text-gray-400 hover:text-green-400 transition-colors duration-300"
                 >
-                  leedaydevs@gmail.com
+                  LeeDayDevs@gmail.com
                 </a>
               </div>
             </div>
@@ -454,7 +336,7 @@ ${data.name}`
               </div>
               <div>
                 <p className="text-white font-medium">Location</p>
-                <p className="text-gray-400">London, UK • Worldwide Service</p>
+                <p className="text-gray-400">Paul Street, London EC2A 4NE</p>
               </div>
             </div>
 
@@ -475,36 +357,11 @@ ${data.name}`
 
           {/* Response Time */}
           <div className="mt-6 p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
-            <p className="text-blue-300 font-medium text-sm">⚡ Quick Response</p>
+            <p className="text-blue-300 font-medium text-sm">⚡ Quick Response for Small Businesses</p>
             <p className="text-blue-200 text-sm">
-              I typically respond to all inquiries within 24 hours during business days.
+              I understand small business owners are busy - I respond to all inquiries within 24 hours with practical,
+              budget-friendly solutions.
             </p>
-
-            {/* WhatsApp Quick Contact */}
-            <div className="mt-6">
-              <a
-                href="https://wa.me/447586266007?text=Hi%20Lee!%20👋%0A%0AI'm%20interested%20in%20discussing%20a%20web%20development%20project.%20Could%20we%20chat%3F%0A%0AServices%20I'm%20interested%20in:%0A•%20Custom%20Web%20Development%0A•%20AI%20Integration%0A•%20Hosting%20%26%20Maintenance%0A%0ALooking%20forward%20to%20hearing%20from%20you!"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center space-x-3 whatsapp-button text-white px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
-                aria-label="Contact via WhatsApp for instant messaging"
-              >
-                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <div className="text-white font-semibold text-sm">WhatsApp Chat</div>
-                  <div className="text-green-100 text-xs">Instant response • Available now</div>
-                </div>
-                <div className="w-6 h-6 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all duration-300">
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </a>
-            </div>
           </div>
         </div>
       </div>

@@ -15,10 +15,16 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
   const buttonRef = useRef<HTMLButtonElement>(null)
 
   const navigationItems = [
-    { id: "services", label: "Services", description: "View our web development and AI services" },
-    { id: "portfolio", label: "Portfolio", description: "Browse our featured projects and case studies" },
-    { id: "about", label: "About", description: "Learn about Lee Day and our expertise" },
-    { id: "contact", label: "Contact", description: "Get in touch for your project quote" },
+    { id: "services", label: "Services", description: "View our web development and AI services", color: "cyan" },
+    { id: "process", label: "Process", description: "See how we work together", color: "indigo" },
+    {
+      id: "portfolio",
+      label: "Portfolio",
+      description: "Browse our featured projects and case studies",
+      color: "purple",
+    },
+    { id: "about", label: "About", description: "Learn about Lee Day and our expertise", color: "blue" },
+    { id: "contact", label: "Contact", description: "Get in touch for your project quote", color: "green" },
   ]
 
   // Handle keyboard navigation
@@ -102,7 +108,7 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             <a
               href="#main-content"
               className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md"
@@ -118,11 +124,14 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
               <button
                 key={item.id}
                 onClick={() => handleNavigation(item.id)}
-                className="hover:text-blue-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md px-2 py-1"
+                className={`relative hover:text-${item.color}-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md px-2 py-1 group`}
                 role="menuitem"
                 aria-describedby={`${item.id}-description`}
               >
                 {item.label}
+                <div
+                  className={`absolute bottom-0 left-0 w-0 h-0.5 bg-${item.color}-400 transition-all duration-300 group-hover:w-full`}
+                ></div>
                 <span id={`${item.id}-description`} className="sr-only">
                   {item.description}
                 </span>
@@ -174,6 +183,15 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
             </div>
           </div>
         )}
+      </div>
+      {/* Scroll Progress Indicator */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-800">
+        <div
+          className="h-full bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300"
+          style={{
+            width: `${Math.min((scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)}%`,
+          }}
+        ></div>
       </div>
     </nav>
   )

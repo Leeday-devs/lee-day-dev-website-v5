@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services Page Section -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/#services</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Pricing Page Section -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/#pricing</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Portfolio Page Section -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/#portfolio</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ Page Section -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/#faq</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Testimonials Page Section -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/#testimonials</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About Page Section -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/#about</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact Page Section -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/#contact</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service-specific landing pages (for future expansion) -->
+  
+  <!-- Custom Web Development -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/services/custom-web-development</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Integration Services -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/services/ai-integration</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Website Hosting -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/services/website-hosting</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- E-commerce Solutions -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/services/ecommerce-solutions</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Local SEO Services -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/services/local-seo</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Mobile App Development -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/services/mobile-app-development</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Website Redesign -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/services/website-redesign</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Business Automation -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/services/business-automation</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Website Maintenance -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/services/website-maintenance</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Location-based pages for local SEO -->
+  
+  <!-- London Web Development -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/london-web-development</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- UK Small Business Web Development -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/uk-small-business-web-development</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Industry-specific pages -->
+  
+  <!-- Small Business Web Development -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/small-business-web-development</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Chatbot Development -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/ai-chatbot-development</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Affordable Web Design -->
+  <url>
+    <loc>https://ldwebdevelopment.co.uk/affordable-web-design</loc>
+    <lastmod>2024-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

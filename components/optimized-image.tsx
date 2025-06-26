@@ -88,7 +88,18 @@ export function OptimizedImage({
           className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center"
           style={{ aspectRatio: width && height ? `${width}/${height}` : undefined }}
         >
-          {placeholder && <div className="text-gray-400 text-sm text-center p-4">{placeholder}</div>}
+          {/* Show Lee Day about image as placeholder for about section images */}
+          {src.includes("lee-day-about") ? (
+            <img
+              src="/placeholder.svg?height=500&width=400&text=Lee+Day+Professional+Photo"
+              alt="Lee Day placeholder"
+              className="w-full h-full object-cover opacity-50"
+            />
+          ) : placeholder ? (
+            <div className="text-gray-400 text-sm text-center p-4">{placeholder}</div>
+          ) : (
+            <div className="text-gray-400 text-sm text-center p-4">Loading...</div>
+          )}
         </div>
       )}
 

@@ -13,20 +13,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "LD Web Development – Custom Web Development & AI Integration UK",
   description:
-    "Professional web development & AI integration services worldwide. Custom websites, hosting, AI chatbots & automation solutions for businesses globally.",
+    "Professional web development & AI integration services in London. Custom websites, hosting, AI chatbots & automation solutions for UK businesses by LD Web Development.",
   keywords:
-    "web development, AI integration, custom websites, hosting, chatbots, London, UK, worldwide, responsive design, e-commerce, automation",
-  authors: [{ name: "Lee Day", url: "https://leeday.dev" }],
-  creator: "Lee Day",
-  publisher: "LD Web Development",
+    "web development, AI integration, custom websites, hosting, chatbots, London, UK, responsive design, e-commerce, automation, LD Web Development",
+  authors: [{ name: "Lee Day", url: "https://ldwebdevelopment.co.uk" }],
+  creator: "LD Web Development",
+  publisher: "LD Web Development - a part of Hosting Easy Ltd",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://leeday.dev",
+    url: "https://ldwebdevelopment.co.uk",
     title: "LD Web Development – Custom Web Development & AI Integration UK",
     description:
-      "Professional web development & AI integration services worldwide. Custom websites, hosting, AI chatbots & automation solutions for businesses globally.",
+      "Professional web development & AI integration services in London. Custom websites, hosting, AI chatbots & automation solutions for UK businesses by LD Web Development.",
     siteName: "LD Web Development",
     images: [
       {
@@ -41,18 +41,18 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "LD Web Development – Custom Web Development & AI Integration UK",
     description:
-      "Professional web development & AI integration services worldwide. Custom websites, hosting, AI chatbots & automation solutions.",
+      "Professional web development & AI integration services in London. Custom websites, hosting, AI chatbots & automation solutions by LD Web Development.",
     images: ["/og-image.jpg"],
-    creator: "@leedaydev",
+    creator: "@ldwebdev",
   },
   alternates: {
-    canonical: "https://leeday.dev",
+    canonical: "https://ldwebdevelopment.co.uk",
   },
   other: {
     "geo.region": "GB",
-    "geo.placename": "London, Windsor",
-    "geo.position": "51.5074;-0.1278",
-    ICBM: "51.5074, -0.1278",
+    "geo.placename": "London",
+    "geo.position": "51.5254;-0.0863",
+    ICBM: "51.5254, -0.0863",
   },
     generator: 'v0.dev'
 }
@@ -84,14 +84,15 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "@id": "https://leeday.dev/#business",
+              "@id": "https://ldwebdevelopment.co.uk/#business",
               name: "LD Web Development",
               alternateName: "LD Development",
+              legalName: "Hosting Easy Ltd",
               description:
-                "Professional web development and AI integration services specializing in custom websites, hosting solutions, and intelligent automation for businesses worldwide.",
-              url: "https://leeday.dev",
-              telephone: "07586266007",
-              email: "leedaydevs@gmail.com",
+                "Professional web development and AI integration services specializing in custom websites, hosting solutions, and intelligent automation for UK businesses.",
+              url: "https://ldwebdevelopment.co.uk",
+              telephone: "+44-7586-266007",
+              email: "LeeDayDevs@gmail.com",
               priceRange: "££-£££",
               currenciesAccepted: "GBP",
               paymentAccepted: "Cash, Credit Card, Bank Transfer",
@@ -100,7 +101,7 @@ export default function RootLayout({
 
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "3rd Floor 86-90 Paul Street",
+                streetAddress: "3rd Floor 86-90, Paul Street",
                 addressLocality: "London",
                 addressRegion: "England",
                 addressCountry: "GB",
@@ -122,17 +123,12 @@ export default function RootLayout({
                   "@type": "Country",
                   name: "United Kingdom",
                 },
-                {
-                  "@type": "Place",
-                  name: "Worldwide",
-                  description: "Remote services available globally",
-                },
               ],
 
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: "51.5225",
-                longitude: "-0.0864",
+                latitude: "51.5254",
+                longitude: "-0.0863",
               },
 
               founder: {
@@ -157,6 +153,19 @@ export default function RootLayout({
                 "@type": "Person",
                 name: "Lee Day",
                 jobTitle: "CEO & Lead Developer",
+              },
+
+              parentOrganization: {
+                "@type": "Organization",
+                name: "Hosting Easy Ltd",
+                identifier: "15169743",
+                description: "UK Registered Company",
+              },
+
+              identifier: {
+                "@type": "PropertyValue",
+                name: "UK Company Number",
+                value: "15169743",
               },
 
               serviceType: "Web Development & AI Integration",
@@ -244,7 +253,7 @@ export default function RootLayout({
                     name: "Sarah Johnson",
                   },
                   reviewBody:
-                    "Exceptional web development service. Lee delivered our e-commerce platform on time and within budget. The AI chatbot integration has significantly improved our customer service.",
+                    "Exceptional web development service. LD Web Development delivered our e-commerce platform on time and within budget. The AI chatbot integration has significantly improved our customer service.",
                 },
                 {
                   "@type": "Review",
@@ -258,11 +267,11 @@ export default function RootLayout({
                     name: "Michael Chen",
                   },
                   reviewBody:
-                    "Professional, reliable, and innovative. The custom website Lee built for our startup has helped us secure significant funding. Highly recommended!",
+                    "Professional, reliable, and innovative. The custom website LD Web Development built for our startup has helped us secure significant funding. Highly recommended!",
                 },
               ],
 
-              sameAs: ["https://linkedin.com/in/leeday", "https://github.com/leeday", "https://twitter.com/leedaydev"],
+              sameAs: ["https://linkedin.com/in/leeday", "https://github.com/leeday", "https://twitter.com/ldwebdev"],
 
               openingHoursSpecification: [
                 {
@@ -282,14 +291,14 @@ export default function RootLayout({
               contactPoint: [
                 {
                   "@type": "ContactPoint",
-                  telephone: "07586266007",
+                  telephone: "+44-7586-266007",
                   contactType: "customer service",
                   availableLanguage: ["English"],
                   areaServed: "GB",
                 },
                 {
                   "@type": "ContactPoint",
-                  email: "leedaydevs@gmail.com",
+                  email: "LeeDayDevs@gmail.com",
                   contactType: "customer service",
                   availableLanguage: ["English"],
                   areaServed: "GB",
