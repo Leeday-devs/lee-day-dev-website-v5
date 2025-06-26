@@ -27,6 +27,12 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
     { id: "contact", label: "Contact", description: "Get in touch for your project quote", color: "green" },
   ]
 
+  // Avoid document/window during SSR
+  const progressWidth =
+    typeof document !== "undefined"
+      ? Math.min((scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)
+      : 0
+
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -188,9 +194,7 @@ export function AccessibleNavigation({ scrollY, onNavigate }: NavigationProps) {
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-800">
         <div
           className="h-full bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300"
-          style={{
-            width: `${Math.min((scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)}%`,
-          }}
+          style={{ width: `${progressWidth}%` }}
         ></div>
       </div>
     </nav>

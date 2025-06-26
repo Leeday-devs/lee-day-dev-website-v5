@@ -12,10 +12,11 @@ import { ContactForm } from "@/components/contact-form"
 import { Pricing } from "@/components/pricing"
 import { FAQSection } from "@/components/faq-section"
 import { ProcessSection } from "@/components/process-section"
-import { TrustBadges, FloatingTrustIndicator, MiniTrustBadges } from "@/components/trust-badges"
+import { TrustBadges, MiniTrustBadges } from "@/components/trust-badges"
 import { SocialProofSection } from "@/components/social-proof-section"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { ChatWidget } from "@/components/chat-widget"
+import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   const [scrollY, setScrollY] = useState(0)
@@ -38,9 +39,6 @@ export default function HomePage() {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Navigation */}
       <AccessibleNavigation scrollY={scrollY} onNavigate={scrollToSection} />
-
-      {/* Floating Trust Indicator */}
-      <FloatingTrustIndicator />
 
       {/* Chat Widget */}
       <ChatWidget />
@@ -1120,114 +1118,7 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 border-t border-gray-700 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">
-                LD Web Development
-              </div>
-              <p className="text-gray-400 mb-4 max-w-md">
-                Professional web development and AI integration services for small businesses across the UK. Transform
-                your online presence and grow your customer base with our affordable solutions.
-              </p>
-              <div className="flex space-x-4">
-                <a
-                  href="mailto:LeeDayDevs@gmail.com"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
-                  aria-label="Email LD Web Development"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                  </svg>
-                </a>
-                <a
-                  href="tel:+447586266007"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                  aria-label="Call LD Web Development"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                  </svg>
-                </a>
-                <a
-                  href="https://wa.me/447586266007"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                  aria-label="WhatsApp LD Web Development"
-                >
-                  <WhatsAppIcon className="w-6 h-6" />
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-4">Services</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <button onClick={() => scrollToSection("services")} className="hover:text-white transition-colors">
-                    Custom Web Development
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollToSection("services")} className="hover:text-white transition-colors">
-                    AI Integration
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollToSection("services")} className="hover:text-white transition-colors">
-                    Website Hosting
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollToSection("pricing")} className="hover:text-white transition-colors">
-                    Pricing
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <button onClick={() => scrollToSection("about")} className="hover:text-white transition-colors">
-                    About
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollToSection("portfolio")} className="hover:text-white transition-colors">
-                    Portfolio
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection("testimonials")}
-                    className="hover:text-white transition-colors"
-                  >
-                    Testimonials
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollToSection("contact")} className="hover:text-white transition-colors">
-                    Contact
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm">
-              © 2024 LD Web Development - a part of Hosting Easy Ltd. All rights reserved.
-            </div>
-            <div className="text-gray-400 text-sm mt-4 md:mt-0">
-              <span>Company Number: 15169743</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer onNavigate={scrollToSection} />
     </div>
   )
 }

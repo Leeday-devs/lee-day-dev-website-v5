@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { Shield, Award, Users, Clock, CheckCircle, Star, Zap, Lock } from "lucide-react"
+import { Shield, Award, Users, Clock, CheckCircle, Zap, Lock } from "lucide-react"
 
 interface TrustBadge {
   id: string
@@ -262,36 +262,6 @@ export function TrustBadges({ variant = "full", showClientLogos = true, showSecu
           <div className="flex items-center text-purple-400">
             <CheckCircle className="w-4 h-4 mr-2" />
             Ongoing Support
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-// Floating Trust Indicator Component
-export function FloatingTrustIndicator() {
-  return (
-    <div className="fixed bottom-24 left-4 z-30 hidden lg:block">
-      <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 shadow-xl">
-        <div className="flex items-center space-x-3">
-          <div className="flex -space-x-2">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold"
-              >
-                {String.fromCharCode(64 + i)}
-              </div>
-            ))}
-          </div>
-          <div>
-            <div className="flex items-center">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="w-3 h-3 text-yellow-400 fill-current" />
-              ))}
-            </div>
-            <p className="text-white text-xs font-medium">50+ Happy Clients</p>
           </div>
         </div>
       </div>

@@ -85,20 +85,13 @@ export function OptimizedImage({
       {/* Placeholder/Loading state */}
       {!isLoaded && !hasError && (
         <div
-          className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center"
+          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
           style={{ aspectRatio: width && height ? `${width}/${height}` : undefined }}
         >
-          {/* Show Lee Day about image as placeholder for about section images */}
-          {src.includes("lee-day-about") ? (
-            <img
-              src="/placeholder.svg?height=500&width=400&text=Lee+Day+Professional+Photo"
-              alt="Lee Day placeholder"
-              className="w-full h-full object-cover opacity-50"
-            />
-          ) : placeholder ? (
-            <div className="text-gray-400 text-sm text-center p-4">{placeholder}</div>
+          {placeholder ? (
+            <div className="text-gray-500 text-sm text-center p-4">{placeholder}</div>
           ) : (
-            <div className="text-gray-400 text-sm text-center p-4">Loading...</div>
+            <div className="text-gray-500 text-sm text-center p-4">Loading...</div>
           )}
         </div>
       )}
@@ -106,10 +99,10 @@ export function OptimizedImage({
       {/* Error state */}
       {hasError && (
         <div
-          className="absolute inset-0 bg-gray-800 flex items-center justify-center border border-gray-600"
+          className="absolute inset-0 bg-gray-200 flex items-center justify-center border border-gray-300"
           style={{ aspectRatio: width && height ? `${width}/${height}` : undefined }}
         >
-          <div className="text-gray-400 text-sm text-center p-4">
+          <div className="text-gray-500 text-sm text-center p-4">
             <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
